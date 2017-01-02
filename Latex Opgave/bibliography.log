@@ -1,0 +1,205 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdftex 2016.4.13)  20 DEC 2016 13:44
+entering extended mode
+**"C:/Users/Mark Roland/Desktop/Bachelor/Latex Opgave/bibliography.bib"
+("C:/Users/Mark Roland/Desktop/Bachelor/Latex Opgave/bibliography.bib"
+! Misplaced alignment tab character &.
+l.21 ..., Charles E. Leiserson, Ronald L. Rivest &
+                                                   Clifford Stein},
+? 
+Missing character: There is no â in font cmr10!
+Missing character: There is no ˆ in font cmr10!
+Missing character: There is no — in font cmr10!
+! Undefined control sequence.
+l.66 	howpublished = {\url
+                          {http://epubs.siam.org/doi/pdf/10.1137/0213024}},
+? 
+
+Overfull \hbox (176.88527pt too wide) in paragraph at lines 64--68
+[]\tenrm @misclcaWeb, ti-tle = Fast Al-go-rithms for Find-ing Near-est Com-mon 
+An-ces-tors, how-pub-lished = http://epubs.siam.org/doi/pdf/10.1137/0213024,|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm @
+.\tenrm m
+.\tenrm i
+.\tenrm s
+.etc.
+
+! Undefined control sequence.
+l.71 	howpublished = {\url
+                          {http://epubs.siam.org/doi/abs/10.1137/0217079}},
+? 
+
+Overfull \hbox (5.21826pt too wide) in paragraph at lines 86--97
+[]\tenrm @articleBaltra1990, Au-thor = Ar-mando Bal-tra, Date-Added = 2015-08-0
+9 19:14:38 +0000, Date-Modified|
+
+\hbox(6.94444+1.94444)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm @
+.\tenrm a
+.\tenrm r
+.\tenrm t
+.etc.
+
+[1{C:/Users/Mark Roland/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Overfull \hbox (4.32933pt too wide) in paragraph at lines 152--158
+[]\tenrm @mischabit2012, Au-thor = Statis-tics Den-mark, Date-Added = 2015-08-0
+5 12:44:18 +0000, Date-Modified|
+
+\hbox(6.94444+1.94444)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm @
+.\tenrm m
+.\tenrm i
+.\tenrm s
+.etc.
+
+
+Overfull \hbox (43.24622pt too wide) in paragraph at lines 152--158
+\tenrm = 2015-08-05 12:52:20 +0000, How-pub-lished = http://www.dst.dk/en/Stati
+stik/dokumentation/declarations/cultural-|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\tenrm =
+.\glue 3.33333 plus 1.66666 minus 1.11111
+.\tenrm 2
+.\tenrm 0
+.\tenrm 1
+.etc.
+
+
+Overfull \hbox (0.85707pt too wide) in paragraph at lines 159--166
+[]\tenrm @miscTalk2008, Au-thor = Jean-nette M. Wing, Date-Added = 2015-08-05 0
+9:26:59 +0000, Date-Modified|
+
+\hbox(6.94444+1.94444)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm @
+.\tenrm m
+.\tenrm i
+.\tenrm s
+.etc.
+
+
+Overfull \hbox (5.30168pt too wide) in paragraph at lines 175--182
+\tenrm 2015-07-07 18:27:48 +0000, How-pub-lished = http://www.statistikbanken.d
+k/KVUB1204, Ti-tle = KVUB1204:|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\tenrm 2
+.\tenrm 0
+.\tenrm 1
+.\tenrm 5
+.\tenrm -
+.etc.
+
+
+Overfull \hbox (50.7186pt too wide) in paragraph at lines 206--221
+\tenrm http://doi.acm.org/10.1145/1288580.1288594, Year = 2007, Bdsk-Url-1 = ht
+tp://doi.acm.org/10.1145/1288580.1288594,|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\tenrm h
+.\kern-0.27779
+.\tenrm t
+.\tenrm t
+.\tenrm p
+.etc.
+
+[2]
+Overfull \hbox (58.55167pt too wide) in paragraph at lines 248--258
+\tenrm En-gi-neer-ing Ed-u-ca-tion Con-fer-ence, Date-Modified = 2015-07-05 19:
+32:49 +0000, File = :Users/JennyVej1/Dropbox/DIKU|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\tenrm E
+.\tenrm n
+.\discretionary
+..\tenrm -
+.\tenrm g
+.\tenrm i
+.etc.
+
+
+Overfull \hbox (23.15355pt too wide) in paragraph at lines 248--258
+\tenrm - 2010-2015/5. ar - kan-di-dat/4+5 - Project/ProjectOutsideCourseScope/
+07096089.pdf:pdf, Isbn = 9781479919086,|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\tenrm -
+.\discretionary
+.\glue 3.33333 plus 1.66666 minus 1.11111
+.\tenrm 2
+.\tenrm 0
+.etc.
+
+
+Overfull \hbox (10.32947pt too wide) in paragraph at lines 248--258
+\tenrm Key-words = cod-ing,computational think-ing,computer pro-gram-ming,educa
+tional tool,english,technology-, Pages|
+
+\hbox(6.94444+1.94444)x469.75499, glue set - 1.0
+.\tenrm K
+.\tenrm e
+.\tenrm y
+.\discretionary
+..\tenrm -
+.\tenrm w
+.etc.
+
+
+Overfull \hbox (72.06918pt too wide) in paragraph at lines 259--275
+\tenrm :Users/JennyVej1/Dropbox/DIKU - 2010-2015/5. ar - kan-di-dat/4+5 - Proj
+ect/ProjectOutsideCourseScope/3717.full.pdf:pdf,|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\tenrm :
+.\tenrm U
+.\tenrm s
+.\tenrm e
+.\tenrm r
+.etc.
+
+
+Overfull \hbox (62.24617pt too wide) in paragraph at lines 259--275
+\tenrm phys-i-cal, and en-gi-neer-ing sci-ences, Key-words = 1,ab-strac-tion,an
+ ap-proach to solv-ing,automation,computable,computational|
+
+\hbox(6.94444+1.94444)x469.75499, glue set - 1.0
+.\tenrm p
+.\tenrm h
+.\kern-0.27779
+.\tenrm y
+.\tenrm s
+.etc.
+
+)
+*
+
+Overfull \hbox (39.24632pt too wide) in paragraph at lines 276--0
+\tenrm Pmid = 18672462, Ti-tle = Com-pu-ta-tional think-ing, Url = http://porta
+l.acm.org/citation.cfm?doid=1118178.1118215,|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\tenrm P
+.\tenrm m
+.\tenrm i
+.\tenrm d
+.\glue 3.33333 plus 1.66666 minus 1.11111
+.etc.
+
+(Please type a command or say `\end')
+*
+(Please type a command or say `\end')
+*\end
+[3]<C:/Users/Mark Roland/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmr10.pfb><C:/Users/Mark Roland/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on bibliography.pdf (3 pages, 45991 bytes).
+PDF statistics:
+ 20 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

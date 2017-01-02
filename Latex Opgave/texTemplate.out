@@ -1,0 +1,31 @@
+\BOOKMARK [1][-]{section.1}{Abstract}{}% 1
+\BOOKMARK [1][-]{section.2}{Description}{}% 2
+\BOOKMARK [1][-]{section.3}{Preface}{}% 3
+\BOOKMARK [1][-]{section.4}{Limitations}{}% 4
+\BOOKMARK [1][-]{section.5}{Introduction}{}% 5
+\BOOKMARK [1][-]{section.6}{String Matching}{}% 6
+\BOOKMARK [2][-]{subsection.6.1}{Suffix trees}{section.6}% 7
+\BOOKMARK [2][-]{subsection.6.2}{Knutt-Moris-Pratt Algorithm}{section.6}% 8
+\BOOKMARK [2][-]{subsection.6.3}{Operations on suffix trees}{section.6}% 9
+\BOOKMARK [3][-]{subsubsection.6.3.1}{Insertion \046 Deletion}{subsection.6.3}% 10
+\BOOKMARK [3][-]{subsubsection.6.3.2}{Lowest Common Ancestor}{subsection.6.3}% 11
+\BOOKMARK [3][-]{subsubsection.6.3.3}{Longest Common Prefix}{subsection.6.3}% 12
+\BOOKMARK [3][-]{subsubsection.6.3.4}{Predecessor \046 successor amongst strings}{subsection.6.3}% 13
+\BOOKMARK [3][-]{subsubsection.6.3.5}{Lowest Common Extension}{subsection.6.3}% 14
+\BOOKMARK [2][-]{subsection.6.4}{Suffix arrays}{section.6}% 15
+\BOOKMARK [2][-]{subsection.6.5}{Suffix Array Induced Sorting Algorithm \(SA-IS\)}{section.6}% 16
+\BOOKMARK [2][-]{subsection.6.6}{SA-IS - correctness and completeness}{section.6}% 17
+\BOOKMARK [2][-]{subsection.6.7}{Operations on suffix arrays}{section.6}% 18
+\BOOKMARK [1][-]{section.7}{Malware Detection System - A string matching approach}{}% 19
+\BOOKMARK [2][-]{subsection.7.1}{Understanding Malware}{section.7}% 20
+\BOOKMARK [2][-]{subsection.7.2}{Building database of known malware - SHA1 encryption}{section.7}% 21
+\BOOKMARK [2][-]{subsection.7.3}{String matching in Malware detection systems}{section.7}% 22
+\BOOKMARK [2][-]{subsection.7.4}{Building interactive systems - Windows \(R\) Forms}{section.7}% 23
+\BOOKMARK [2][-]{subsection.7.5}{Implementing a Malware detection system using preprocessed suffix arrays of known malware}{section.7}% 24
+\BOOKMARK [1][-]{section.8}{Evaluation and recommendations}{}% 25
+\BOOKMARK [1][-]{section.9}{Discussion}{}% 26
+\BOOKMARK [1][-]{section.10}{Future work}{}% 27
+\BOOKMARK [1][-]{section.11}{Conclussion}{}% 28
+\BOOKMARK [1][-]{section.12}{Literature list and references}{}% 29
+\BOOKMARK [1][-]{section.13}{Appendix}{}% 30
+\BOOKMARK [1][-]{appendix.A}{One}{}% 31

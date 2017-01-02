@@ -1,0 +1,136 @@
+\begin{thebibliography}{10}
+
+\bibitem{gusfield}
+D.~Gusfield, {\em Algorithms on strings, trees, and sequences : computer
+  science and computational biology}.
+\newblock The Pres Syndicate Of The University Of Cambridge, 1~ed., 1997.
+
+\bibitem{introduction}
+R.~L. R. . C.~S. Thomas H.~Cormen, Charles E.~Leiserson, {\em Introduction To
+  Algorithms}.
+\newblock The MIT Pres, Cambridge, Massachusetts, London, England, 3th~ed.,
+  2009.
+
+\bibitem{detection}
+D.-N.~L. Nguyen Le~Dang and V.~T. Le, ``A new multiple-pattern matching
+  algorithm for the network intrusion detection system,'' {\em IACSIT
+  International Journal of Engineering and Technology}, vol.~8, no.~2,
+  pp.~1--7, 2016.
+
+\bibitem{mit}
+``Strings - advanced data structures.''
+  https://www.youtube.com/watch?v=F3nbY3hIDLQl.
+
+\bibitem{Kunihiko}
+K.~Sadakane, ``Compressed suffix trees with full functionality∗,'' {\em 2007
+  Springer Science + Business Media, Inc}, pp.~1--19, 2005.
+
+\bibitem{lcaWeb}
+``Fast algorithms for finding nearest common ancestors.''
+  \url{http://epubs.siam.org/doi/pdf/10.1137/0213024}.
+\newblock Accessed: 2016-12-20.
+
+\bibitem{lcaWebSch}
+``Fast algorithms for finding nearest common ancestorson finding lowest common
+  ancestors: Simplification and parallelization. siam journal on computing,
+  1988, vol. 17, no. 6 : pp. 1253-1262.''
+  \url{http://epubs.siam.org/doi/abs/10.1137/0217079}.
+\newblock Accessed: 2016-12-20.
+
+\bibitem{lca}
+M.~Farach, ``Optimal sux tree construction with large alphabets,'' {\em
+  Department of Computer Science, Rutgers University, Piscataway, NJ 08855,
+  USA.}, pp.~1--11, 1997.
+
+\bibitem{Ju1997}
+E.~Ju and C.~Wagner, ``Personal computer adventure games: Their structure,
+  principles, and applicability for training,'' {\em ACM SIGMIS Database},
+  vol.~28, no.~2, pp.~78--92, 1997.
+
+\bibitem{Baltra1990}
+A.~Baltra, ``Language learning through computer adventure games,'' {\em
+  Simulation and Gaming}, vol.~21, pp.~455--452, December 1990.
+
+\bibitem{fysik}
+
+
+\bibitem{graphite}
+D.~M., ``How to use scratch for digital storytelling.''
+  https://www.graphite.org/blog/how-to-use-scratch-for-digital-storytelling.
+
+\bibitem{khan}
+https://www.khanacademy.org/computer-programming/new/pjs.
+
+\bibitem{processing}
+B.~Fry and C.~Reas. http://processingjs.org/.
+
+\bibitem{scratch}
+L.~K.~G. at~MIT Media~Lab, ``Scratch.'' https://scratch.mit.edu/.
+
+\bibitem{efficacy}
+J.~E. Ormrod, {\em Educational Psychology: Developing Learners}.
+\newblock Upper Saddle River, N.J.: Pearson/Merrill Prentice Hall, 5th~ed.,
+  2006.
+
+\bibitem{Kurser}
+``Programming and problem solving (pop).''
+  http://kurser.ku.dk/course/ndab15009u/2015-2016, 2015/2016.
+
+\bibitem{Cormen}
+T.~H. Cormen, C.~E. Leiserson, R.~L. Rivest, and C.~Stein, {\em Introduction to
+  Algorithms}.
+\newblock The MIT Press, third~ed., 2009.
+
+\bibitem{habit2012}
+S.~Denmark, ``Cultural habits survey 2012.''
+  http://www.dst.dk/en/Statistik/dokumentation/declarations/cultural-habits-survey.
+
+\bibitem{Talk2008}
+J.~M. Wing, ``Computational thinking and thinking about computing.''
+  https://www.cs.cmu.edu/afs/cs/usr/wing/www/talks/ct-and-tc-long.pdf, 2008.
+
+\bibitem{iskriv}
+E.~Alinea, ``iskriv.'' http://iskriv.dk/, 2012.
+
+\bibitem{dst}
+D.~Statistik, ``Kvub1204: Children who play computer games by frequency and
+  background.'' http://www.statistikbanken.dk/KVUB1204, 2015.
+
+\bibitem{May2013}
+T.~May and B.~K. Walther, {\em Computerspillets Fort{\ae}llinger}, vol.~1.
+\newblock Gyldendal, 2013.
+
+\bibitem{Blum2007}
+L.~Blum and T.~J. Cortina, ``{CS4HS: An Outreach Program for High School CS
+  Teachers},'' {\em Sigcse '07}, pp.~19--23, 2007.
+
+\bibitem{Gray2007}
+S.~Gray, C.~S. Clair, R.~James, and J.~Mead, ``{Suggestions for graduated
+  exposure to programming concepts using fading worked examples},'' {\em ICER},
+  pp.~99--110, 2007.
+
+\bibitem{Kafai2006}
+Y.~B. Kafai, ``{Playing and Making Games for Learning: Instructionist and
+  Constructionist Perspectives for Game Studies},'' {\em Games and Culture},
+  vol.~1, no.~1, pp.~36--40, 2006.
+
+\bibitem{Nousiainen2009}
+T.~Nousiainen, {\em Children's Involvement in the Design of Game-Based Learning
+  Environments}, pp.~49--66.
+\newblock Springer Science, 2009.
+
+\bibitem{Rey2015}
+J.~Moreno-Le{\'o}n and G.~Robles, ``{Computer programming as an educational
+  tool in the English classroom},'' in {\em 2015 IEEE Global Engineering
+  Education Conference}, pp.~961--966, 2015.
+
+\bibitem{Wing2008}
+J.~M. Wing, ``{Computational thinking and thinking about computing.},'' {\em
+  Philosophical transactions. Series A, Mathematical, physical, and engineering
+  sciences}, vol.~366, no.~1881, pp.~3717--3725, 2008.
+
+\bibitem{Wing2006}
+J.~M. Wing, ``{Computational thinking},'' {\em Communications of the ACM},
+  vol.~49, no.~3, pp.~33--35, 2006.
+
+\end{thebibliography}

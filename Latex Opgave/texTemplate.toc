@@ -1,0 +1,32 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}Abstract}{3}{section.1}
+\contentsline {section}{\numberline {2}Description}{3}{section.2}
+\contentsline {section}{\numberline {3}Preface}{3}{section.3}
+\contentsline {section}{\numberline {4}Limitations}{3}{section.4}
+\contentsline {section}{\numberline {5}Introduction}{3}{section.5}
+\contentsline {section}{\numberline {6}String Matching}{3}{section.6}
+\contentsline {subsection}{\numberline {6.1}Suffix trees}{4}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Knutt-Moris-Pratt Algorithm}{6}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}Operations on suffix trees}{6}{subsection.6.3}
+\contentsline {subsubsection}{\numberline {6.3.1}Insertion \& Deletion}{6}{subsubsection.6.3.1}
+\contentsline {subsubsection}{\numberline {6.3.2}Lowest Common Ancestor}{6}{subsubsection.6.3.2}
+\contentsline {subsubsection}{\numberline {6.3.3}Longest Common Prefix}{8}{subsubsection.6.3.3}
+\contentsline {subsubsection}{\numberline {6.3.4}Predecessor $\&$ successor amongst strings}{8}{subsubsection.6.3.4}
+\contentsline {subsubsection}{\numberline {6.3.5}Lowest Common Extension}{8}{subsubsection.6.3.5}
+\contentsline {subsection}{\numberline {6.4}Suffix arrays}{8}{subsection.6.4}
+\contentsline {subsection}{\numberline {6.5}Suffix Array Induced Sorting Algorithm (SA-IS)}{8}{subsection.6.5}
+\contentsline {subsection}{\numberline {6.6}SA-IS - correctness and completeness}{8}{subsection.6.6}
+\contentsline {subsection}{\numberline {6.7}Operations on suffix arrays}{8}{subsection.6.7}
+\contentsline {section}{\numberline {7}Malware Detection System - A string matching approach}{8}{section.7}
+\contentsline {subsection}{\numberline {7.1}Understanding Malware}{8}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Building database of known malware - SHA1 encryption}{8}{subsection.7.2}
+\contentsline {subsection}{\numberline {7.3}String matching in Malware detection systems}{8}{subsection.7.3}
+\contentsline {subsection}{\numberline {7.4}Building interactive systems - Windows (R) Forms}{8}{subsection.7.4}
+\contentsline {subsection}{\numberline {7.5}Implementing a Malware detection system using preprocessed suffix arrays of known malware}{8}{subsection.7.5}
+\contentsline {section}{\numberline {8}Evaluation and recommendations}{8}{section.8}
+\contentsline {section}{\numberline {9}Discussion}{8}{section.9}
+\contentsline {section}{\numberline {10}Future work}{8}{section.10}
+\contentsline {section}{\numberline {11}Conclussion}{8}{section.11}
+\contentsline {section}{\numberline {12}Literature list and references}{8}{section.12}
+\contentsline {section}{\numberline {13}Appendix}{8}{section.13}
+\contentsline {section}{\numberline {A}One}{9}{appendix.A}
