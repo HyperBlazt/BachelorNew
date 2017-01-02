@@ -1,0 +1,8 @@
+D:\Projects\VirusSendData\VirusSendData\bin\Debug\VirusSendData.exe.config
+D:\Projects\VirusSendData\VirusSendData\bin\Debug\VirusSendData.exe
+D:\Projects\VirusSendData\VirusSendData\bin\Debug\VirusSendData.pdb
+D:\Projects\VirusSendData\VirusSendData\obj\Debug\VirusSendData.Properties.Resources.resources
+D:\Projects\VirusSendData\VirusSendData\obj\Debug\VirusSendData.csproj.GenerateResource.Cache
+D:\Projects\VirusSendData\VirusSendData\obj\Debug\VirusSendData.exe
+D:\Projects\VirusSendData\VirusSendData\obj\Debug\VirusSendData.pdb
+D:\Projects\VirusSendData\VirusSendData\obj\Debug\VirusSendData.csprojResolveAssemblyReference.cache
