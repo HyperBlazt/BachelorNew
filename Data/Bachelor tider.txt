@@ -1,0 +1,13 @@
+SUFFIX ARRAY
+
+Count		Build Time		With clear?	Space in bytes		Split option		Compresion ratio in %
+27.653.668 	04:06:08.1928551 	yes	 	1.109.663.744 byte	4096	files	
+27.653.668	04:15:08.0982368	no		6.862.200.832 byte	4096 	files
+27.653.668	03:22:07.5621072	yes		1.126.215.680 byte	512 	files
+27.653.668	13:03:03.3263833	yes		1.340.600.320 byte	131.072 files
+
+SUFFIX TREE
+
+Count		Build Time		With clear?	Space in bytes	 	Split option
+27.653.668	00:44:35.2020521 	no		28.656.254.976 byte	4096	files
+27.653.668				yes					512 	files
