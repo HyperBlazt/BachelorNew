@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdftex 2016.4.13)  20 DEC 2016 13:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdftex 2016.4.13)  21 FEB 2017 10:43
 entering extended mode
-**"C:/Users/Mark Roland/Desktop/Bachelor/Latex Opgave/bibliography.bib"
-("C:/Users/Mark Roland/Desktop/Bachelor/Latex Opgave/bibliography.bib"
+**"D:/GitHub bachelor/BachelorNew/Latex Opgave/bibliography.bib"
+("D:/GitHub bachelor/BachelorNew/Latex Opgave/bibliography.bib"
 ! Misplaced alignment tab character &.
 l.21 ..., Charles E. Leiserson, Ronald L. Rivest &
                                                    Clifford Stein},
@@ -190,6 +190,8 @@ l.acm.org/citation.cfm?doid=1118178.1118215,|
 .\glue 3.33333 plus 1.66666 minus 1.11111
 .etc.
 
+(Please type a command or say `\end')
+*
 (Please type a command or say `\end')
 *
 (Please type a command or say `\end')

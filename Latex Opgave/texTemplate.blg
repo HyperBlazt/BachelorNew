@@ -1,11 +1,15 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: texTemplate.aux
 The style file: ieeetr.bst
-Illegal, another \bibstyle command---line 93 of file texTemplate.aux
+Illegal, another \bibstyle command---line 112 of file texTemplate.aux
  : \bibstyle
  :          {unsrt}
 I'm skipping whatever remains of this command
 Database file #1: bibliography.bib
 Name 1 in "Nguyen Le Dang, Dac-Nhuong Le, and Vinh Trong Le" has a comma at the end for entry detection
 while executing---line 963 of file ieeetr.bst
+Name 1 in "Ge Nong, Sen Zhang, and Wai Hong Chan" has a comma at the end for entry twoeffecient
+while executing---line 963 of file ieeetr.bst
+Name 1 in "Simon J. Puglisi, William F. Smyth, and Andrew Turpin" has a comma at the end for entry performancesuffix
+while executing---line 963 of file ieeetr.bst
 Warning--all relevant fields are empty in fysik
-(There were 2 error messages)
+(There were 4 error messages)

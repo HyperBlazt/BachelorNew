@@ -1,8 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.13)  28 SEP 2016 11:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.13)  21 FEB 2017 10:37
 entering extended mode
-**"C:/Users/Mark Roland/Desktop/Bachelor/Latex Opgave/Latex Forside/forside.tex
-"
-("C:/Users/Mark Roland/Desktop/Bachelor/Latex Opgave/Latex Forside/forside.tex"
+**"D:/GitHub bachelor/BachelorNew/Latex Opgave/Latex Forside/forside.tex"
+("D:/GitHub bachelor/BachelorNew/Latex Opgave/Latex Forside/forside.tex"
 LaTeX2e <2015/10/01> patch level 2
 Babel <3.9n> and hyphenation patterns for 69 languages loaded.
 
@@ -817,18 +816,18 @@ pdfTeX warning: pdflatex.EXE (file ./diku-en.pdf): PDF inclusion: multiple pdfs
 >] (forside.aux) ) 
 Here is how much of TeX's memory you used:
  6231 strings out of 493634
- 84199 string characters out of 3146585
+ 84178 string characters out of 3146585
  176396 words of memory out of 3000000
  9559 multiletter control sequences out of 15000+200000
  12572 words of font info for 28 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 40i,14n,39p,323b,363s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 40i,14n,39p,316b,363s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Mark Roland/AppData/Local/Programs/MiKTeX 2.9/fonts
 /enc/dvips/fontname/8r.enc}<C:/Users/Mark Roland/AppData/Local/Programs/MiKTeX 
 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/Mark Roland/AppData/Local/Prog
 rams/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/Mark Roland/AppDa
 ta/Local/Programs/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb>
-Output written on forside.pdf (1 page, 67800 bytes).
+Output written on forside.pdf (1 page, 67414 bytes).
 PDF statistics:
  33 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

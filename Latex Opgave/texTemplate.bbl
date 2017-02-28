@@ -1,5 +1,9 @@
 \begin{thebibliography}{10}
 
+\bibitem{mit}
+``Strings - advanced data structures.''
+  https://www.youtube.com/watch?v=F3nbY3hIDLQl.
+
 \bibitem{gusfield}
 D.~Gusfield, {\em Algorithms on strings, trees, and sequences : computer
   science and computational biology}.
@@ -16,10 +20,6 @@ D.-N.~L. Nguyen Le~Dang and V.~T. Le, ``A new multiple-pattern matching
   algorithm for the network intrusion detection system,'' {\em IACSIT
   International Journal of Engineering and Technology}, vol.~8, no.~2,
   pp.~1--7, 2016.
-
-\bibitem{mit}
-``Strings - advanced data structures.''
-  https://www.youtube.com/watch?v=F3nbY3hIDLQl.
 
 \bibitem{Kunihiko}
 K.~Sadakane, ``Compressed suffix trees with full functionality∗,'' {\em 2007
@@ -38,9 +38,23 @@ K.~Sadakane, ``Compressed suffix trees with full functionality∗,'' {\em 2007
 \newblock Accessed: 2016-12-20.
 
 \bibitem{lca}
-M.~Farach, ``Optimal sux tree construction with large alphabets,'' {\em
+M.~Farach, ``Optimal suffixx tree construction with large alphabets,'' {\em
   Department of Computer Science, Rutgers University, Piscataway, NJ 08855,
   USA.}, pp.~1--11, 1997.
+
+\bibitem{twoeffecient}
+S.~Z. Ge~Nong and W.~H. Chan, ``Two efficient algorithms for linear time suffix
+  array construction,'' {\em IEEE Transaction on Computers}, pp.~1--20, 2011.
+
+\bibitem{performancesuffix}
+W.~F.~S. Simon J.~Puglisi and A.~Turpin, ``The performance of linear time
+  suffix sorting algorithms,'' {\em Proceedings of the 2005 Data Compression
+  Conference (DCC’05)}, pp.~1--10, 2005.
+
+\bibitem{newapproach}
+U.~Baier, ``Linear-time suffix sorting – a new approach for suffix array
+  construction,'' {\em Institute of Theoretical Computer Science, Ulm
+  University}, pp.~1--10, 2016.
 
 \bibitem{Ju1997}
 E.~Ju and C.~Wagner, ``Personal computer adventure games: Their structure,

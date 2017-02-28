@@ -119,10 +119,8 @@ Fundamentally, string matching is a method to find some pattern $P =\{p_1,p_2,�
 
 \section {String Matching}
 
-String matching is both an algorithmic problem and data structure problem. The static data structure consist of preprocessing some predefined large text $T = \{t_1, t_2, …, t_m}\}$, and query some smaller pattern $P=\{p_1, p_2,...,p_n\}$ \cite{mit}. The objective is to preprocess text $T$ and query pattern $P$ in text $T$ in linear time, $O(m), m \in |T|$ 
+Exact string matching is both an algorithmic problem and data structure problem \cite{mit}. The static data structure consist of preprocessing some predefined large text $T = \{t_1, t_2, …, t_m}\}$, and query some smaller pattern $P=\{p_1, p_2,...,p_n\}$ \cite{mit}. The objective is to preprocess text $T$ and query pattern $P$ in text $T$ in linear time, $O(m), m \in |T|$ 
 \footnote{See \cref{sec:One} for a description of algorithmic time analysis} and $O(n), n \in |P|$, respectively \cite{mit}.  
-\newline
-Following the tradition of Gusfield et al. this discussion begins with the naive methoed of the exact string matching paradigm.
 \newline
 \\*
 Problem:
@@ -133,14 +131,56 @@ Given a pattern $P$ and a long text $T$, the problem consist of finding all occu
 The occurrences of pattern $P=\{ana\}$ in text $T=\{banana\}$ are found at $T[1,3]$ and $T[3,5]$, as illustrated in Figure \ref{fig:banana}. Note that pattern $P$ may overlap.
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.6\textwidth]{1}
+    \includegraphics[width=0.4\textwidth]{1}
     \captionsetup{width=0.8\textwidth}
     \caption{The text $T$=\{banana\} and pattern $P$=\{ana\} over the alphabet $\Sigma$=\{abn\}. The pattern $P$ occours in $T$ in, at position $T[1]$ and $T[3]$. Notice that occurrences of $P$ may overlap.}
     \label{fig:banana}
 \end{figure}
 \newline
+\\ 
+Since most discussions of the exact string matching paradigm, begins with a naive method, this paper adobt the tradition, both presented by Gusfield et. al and by many others \cite{gusfield}. The naive method forms a basic understandig and insight to the more complex exact string mathing algorithms presented in the paper. 
+\newline
+The method align left end of $P$ with left end of $T$ and the scan from left to right, comparing characters of $P$ in $T$, until either there is a mismatch or $P$ is exhausted, in which case an occurence of $P$ in $T$ is reported. $P$ is then shifted one place to the right, and the character comparison is restarted from the left end of $P$ which repeats until $P$ shifts past right end of $T$ \cite{gusfield}.
+\newline
+Let $n$ denote the length of $P$ and let $m$ denote the length of $T$, then the worst-case timecomplexity of the naive method, is $\Theta$(nm). This is particular clear if $P$ and $T$ consists of the same repeated characters, such that the is an occurence of $P$ in $T$ for each of the first $m - n - 1$ positions.
+\newline
+Since most discussions of the exact string matching problem begin with the naïve method. This paper adopt this tradition, as it form a basic insight to the more complex exact string matching algorithms presented later on \cite{gusfield}.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{comparisonbased1}
+    \captionsetup{width=0.8\textwidth}
+    \caption{The naive method, where $P$ is shifted one character to the right after each mismatch.}
+    \label{fig:comparisonbased1}
+\end{figure}
 
-
+Let pattern $P$=  abxyabxz and let text $T$= xabxyabxyabxz.
+\\ \\
+Then the naïve method align left end of $P$  with left end of $T$ and scan from left to right, comparing the characters of $P$ with $T$, until either two disparate characters are located or $P$ is exhausted, in which case an occurrence of $P$ in $T$ is reported. If a character mismatch happens, $P$ is shifted one place to the right, until $P$ exceeds $T$, as illustrated in Figure \ref{fig:comparisonbased1} \cite{gusfield}.
+The worst-case bound of the naïve method is $\Omega$(nm), which can be reduced to $\Omega$(n + m) with the basic idea of shifting $P$ more than one character at a time. This means that the number of character comparisons are reduced, due to $P$ moving through $T$ more rapidly. Some methods even exploit skipping over parts of the pattern after $P$ has shifted, further reducing character comparisons \cite{gusfield}. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{comparisonbased2}
+    \captionsetup{width=0.8\textwidth}
+    \caption{After a mismatch, $P$ is shifted to the next occurrence of $a$ at position 5 in $T$, moving through $T$ more rapidly}
+    \label{fig:comparisonbased2}
+\end{figure}
+\newline   
+Figure \ref{fig:comparisonbased2}  illustrates the idea of shifting $P$ more than one character to the right. At initialization , the left end of $P$ aligns with left end of $T$, here comparing each character from $P$ with $T$ from left to right.
+\newline
+Let $P[0]$ denote the starting character of $P$ found at position 0, such that $P[0]=a$
+\newline
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{comparisonbased3}
+    \captionsetup{width=0.8\textwidth}
+    \caption{Characters that have already been scanned are stored, so when $P$ is shifted to position 5 in $T$, $abx$ have already been scanned and can be skipped, and the character scanning is resumed from position 8 and 3, in $P$ and $T$, respectively.}
+    \label{fig:comparisonbased3}
+\end{figure}
+When comparing characters, if a character in $T$ match $P[0]$, store the location. If a mismatch occur, shift $P$ to the stored location, here position 5 in $T$ and restart the character comparison, as in Figure \ref{fig:comparisonbased2}. This is doable for the reason that $P[0]=a$ does not occur in $T$ before position 5, such that $T[5]=P[0]=a$. 
+The method in Figure \ref{fig:comparisonbased2} can be improved further, knowing that the next  three  characters are $abx$ after $P$ has shifted to position 5 in $T$. Knowing this, the first three characters are skipped, and character scanning are resumed from position 8 in $T$ and position 3 in $P$, as illustrated in Figure \ref{fig:comparisonbased3} \cite{gusfield}. 
+\newline
+The three methods presented exemplifies the basic idea of comparison based algorithms. More efficient algorithms have been developed, such as the Boyer-Moore and Knuth-Morris-Pratt algorithm, which have been implemented to run in linear time $(O(n+m) time)$ \cite{gusfield}. These are without a doubt interesting algorithms to analyze, however this paper merely delivers a short and precise description of the paradigm.
+Another approach to the comparison based method is the preprocessing approach, where comparisons are skipped by first spending a small amount of time, learning about the internal structure of pattern $P$ or text $T$. Some methods preprocess pattern $P$ to solve the exact string matching problem, where the opposite approach is to preprocess text $T$, such as algorithm based on suffix trees \cite{gusfield}.
 
 \subsection{Suffix trees}
 
@@ -187,8 +227,6 @@ The suffix tree for the string $banana\$$, in lexicographical order, is illustra
 \newline
 To dive into the substring problem using linear preprocessing time, $O(m)$, and linear search time, $O(n)$ we follow the tradition, and starts with a naive and straightforward algorithm to building suffix trees before verturing into the linear time preprocessing approach \cite{gusfield}. 
 
-\subsection{Knutt-Moris-Pratt Algorithm}
-
 \subsection{Operations on suffix trees}
 
 Bla bla bla...
@@ -229,16 +267,162 @@ Let’s suppose for simplification that an application is allowed preprocessing 
     \label{fig:travesal_anna}
 \end{figure}
 
-\subsubsection{Predecessor $\&$ successor amongst strings}
+What are the usages
+
+\subsubsection{Predecessor $\&$ Successor Amongst Strings}
+
+1 side
+
 \subsubsection{Lowest Common Extension}
 
+1 side
+\subsection{Space \& Time Complexity}
+\subsection{Suffix Trees To Suffix Arrays In Linear Time}
+
+\subsection{Suffix Arrays}
+
+Suffix array are space efficient alternatives to suffix trees \cite{gusfield,twoeffecient}. Before Manber and Meyers in 1990 introduced the first direct suffix array construction algorithm – SACA, suffix arrays were constructed using lexicographical-order traversal of suffix trees  \cite{gusfield,twoeffecient, performancesuffix, newapproach}. Manber and Meyers made suffix trees obsolete in respect to constructing suffix arrays, and their approach is known as a doubling algorithm, where with each sorting pass, doubles the depth to which each suffix are sorted. This means that suffixes are sorted in logarithmic number of passes, providing a worst case bound of $O(n log n)$ and $O(n)$ expected, assuming linear sort, reminiscent of Radix Sort \cite{performancesuffix} and queries can be answered in $O(P + log n)$ with use of Binary Search \cite{gusfield}.
+\\
+With the discovery of four different SACAs requiring only $O-(n)$ time worst case in 2003, the situation drastically changed. SACAs have since been the focus of intense research \cite{performancesuffix,newapproach}. In 2005 Joong Chae Na introduced more linear time SACAs, where two stood out, the Ko-Aluru (KA) algorithm for supplying good performance in practice and the Kärkkäinen-Sanders algorithm for its elegance \cite{newapproach}. 
+\\
+According to a survey paper, SACAs have to fulfill three important requirements: 
+\begin{quote}
+1. The algorithm should run in asymptotic minimal worst case time, where linear is an optimal way \cite{newapproach}. 
+\end{quote}
+\begin{quote}
+2. The algorithm should run fast in practice \cite{newapproach}.
+\end{quote}
+\begin{quote}
+3. The algorithm should consume as less extra space in addition to the text and suffix array as possible, where constant amount is optimal \cite{newapproach}.
+\end{quote}
+Although no current SACAs fulfill the requirements in an optimal way, research into faster and more space reducing SACAs continued \cite{newapproach}. Later on, in 2009, Nong et al. introduced two new linear time construction algorithms, one which outperformed most known and existing SACAs, called Suffix Array Induced Sorting SA-IS algorithm, guaranteeing asymptotic linear time and almost optimal space requirements \cite{newapproach}. 
 
 
-
-\subsection{Suffix arrays}
 \subsection{Suffix Array Induced Sorting Algorithm (SA-IS)}
-\subsection{SA-IS - correctness and completeness}
+
+The SA-IS algorithm  is a divide and conquer and recursion algorithm, using variable-length leftmost S-type substrings and induced sorting \cite{twoeffecient}. In view of the fact that the SA-IS algorithm is unsophisticated to comprehend, implement and guarantees asymptotic linear time construction and close to optimal space,  SA-IS has been chosen as the single algorithm for the implementation of a malware detection system and the experiments which follow. 
+\\ \\
+Basic notations:
+\\ \\
+Let $S$ be a string or text of $n$-characters stored in an array $[0…n-1]$ and let $\Sigma(s)$ be the alphabet of $S$. 
+\\ \\
+Let $S$$\$$ be a string $S$ concatenated with the termination symbol $\$$, where $\$$ is not contained in $S$ and is the lexicographical smallest character in $S$. For $S$ containing concatenation of multiple strings, let $S={S_0\$S_1\$...S_n-1\$}$, where $\$$ is the termination symbol for each concatenated string in $S$, and is the lexicographical smallest character in $S_0,S_1,...,S_n-1$. Furthermore, $S$ may not be contained in $S_0,S_1,...,S_n-1$.
+\\ \\
+Let $suf(S,i)$ be some suffix in $S$ starting at $S[i]$ running to the termination symbol $\$$. $suf(S,i)$ is of S-type or L-type if $suf(S,i) < suf(S,i+1)$ or $suf(S,i) > suf(S,i+1)$, respectively.
+\\ \\
+Let $suf(S, n-1)$ be the termination symbol and of S-type.
+\\ \\
+
+
+\subsection{SA-IS - Correctness \& Completeness}
+5-8 sider
+\subsection{SA-IS - Linear Time Preprocessing}
+2 sider
+\subsection{Reducing suffix array size for fixed length SA-IS construction}
+
+Suppose that string $S$ consists of fixed length strings concatenated together, where each string $S_0,S_1,...,S_n-1$ is terminated with the sentinel $\$$ such that $S=S_0\$S_1\$...S_n-1\$ $.
+\\ \\
+Let $S=S_0\$S_1\$...S_n-1\$ $ consist of concatenated fixed length distinct strings, such that $|S_0|$ = $|S_1|$=…=$|S_n-1|$ and each string in $S$ is terminated by the sentinel.
+\\ \\
+Let the length of pattern $P$, $|P|$, be same length as the fixed length distinct string in $S$, such that $|P|$=$|S_0|$ = $|S_1|$=…=$|S_n-1|$ .
+\\ \\
+Suppose that the string $S=jazz\$fuzz\$quiz\$$  is given and suffix array SA for $S$ has been computed, such that $SA=[14,4,9,1,5,12,0,10,11,6,13,3,8,2,7]$ as illustated in Figure \ref{fig:jazz}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.3\textwidth]{jazz}
+    \captionsetup{width=0.5\textwidth}
+    \caption{Suffix array and suffixes for S=jazz$\$$fuzz$\$$quiz$\$$}
+    \label{fig:jazz}
+\end{figure}
+
+By means of the Binary Search algorithm, suppose we want to find pattern $p_0=jazz\$$,$ p_1=fuzz\$$ and $p_2=quiz\$$ in the suffix array for $S$, such that $SA[i]$ pattern$ p_0=jazz\$$,$ p_1=fuzz\$$ must be a suffix of $T[SA[i]]$. Then $p_0=jazz\$$ is a suffix of $T[SA[0]]$, $p_0=fuzz\$$ is a suffix of $T[SA[5]]$ and $p_0=quiz\$$ is a suffix of $T[SA[10]]$. Now suppose, that we are only interested in exact matching, and do not care for unnecessary suffixes, then notice that we can match all fixed strings in $S$, with merely three indices in $SA$ for $S$, which leads to 12 indices in $SA$ for $S$ that are never used when exploiting exact string matching. 
+\\
+\begin{quote}
+Let $N_DS$ denote the number of fixed length distinct strings in $S=S_0\$S_1\$...S_n-1\$ $, where $n$ is number of characters in $S$.
+\end{quote}
+\\ \\
+This paper introduce an algorithm that reduce suffix array size for fixed length exact matching, from $O(n)$ to $O(N_DS)$ space complexity with linear time construction. 
+
+\begin{quote}
+\begin{lstlisting}
+SA-IS-FLS(string S, array SA, int len)
+	let SA_FLS = new array[int]()
+	for i=0 to i < length(SA) - 1 do:
+		if(SA[i] NOT EQUAL TO length(S) - len
+		&& S[SA[i] + len] EQUALS ''$'') 
+			then PUT i in SA_FLS
+	return SA_FLS
+\end{lstlisting}
+\end{quote}
+\\
+Describe the algorithm
+\\
+Some description here
+\\
+
+Analyzing the algorithm - something with loopinvariant
+\\ 
+\textbf{Initialization}
+\\
+Some description here
+\\
+
+\textbf{Maintenance}
+\\
+Some description here
+\\
+
+\textbf{Termination}
+\\
+Some description here
+\\
+
+\textbf{Correctness}
+\\
+
+Suppose that the length of the strings in $S$, $len$, is known, then scan $SA$ once, from left to right, and find any index where $T[SA[i] + len] = ''\$''$ and add the elements to the new array SA-FLS in $O(m)$ time, where $m$ is the length of $SA$. Constructing the new suffix array for $S$ using SA-IS-FLS, all unnecessary indices in SA are removed and the new array maintain the lexicographical order.
+\\
+\begin{quote}
+\textbf{Lemma 6.9-1} $SA-IS-FLS$ return a new array $SA-FLS$ that is sorted in lexicographical order.
+\end{quote}
+\\ \\
+\textbf{Proof By Contradiction} 
+\\ \\
+Let $S$ be a string of strings, where each string is concatenated with the termination symbol $\$$. 
+\\ \\
+Let $SA$ be the suffix array $SA$ for string $S$ and let $n$ denote the length of $SA$. Suppose $SA$ is sorted lexicographical for all suffixes in $S$.
+\\ \\
+Suppose that S[SA-FLS[i]] to S[SA-FLS[j]], where i < j < |SA-FLS| is sorted in lexicographical order.
+Suppose that $S[SA-FLS[j+1]]$ is lexicographical smaller than $S[SA-IS-FLS[j]]$, that would suggest that $SA$ for $S$ is not sorted lexicographical for all suffixes in $S$, which is a contradiction. Furthermore, since $SA$ is scanned from left to right and supposed sorted in lexicographical order, each item put in $SA-FLS$ must have been appended in lexicographical order. 
+\\
+\begin{quote}
+\textbf{Lemma 6.9-2} $SA-IS-FLS$ return a new suffix array, $SA-FLS$, containing all indices from $SA$ for $S=S_0\$S_1\$...S_{n-1}\$$ where $S[SA-FLS[i] + len] = ''\$''’$, $len = $l$=$|S_0|$ = $|S_1|$=…=$|S_{n-1}|\$$ and $0 < i < n$.
+\end{quote}
+\\ \\
+\textbf{Proof By Contradiction} 
+\\ \\
+Suppose that there exist some $i$ and $j$, $i < j$, in SA, $0 < i < j < |SA|$ and $len = S_0$ in $S=S_0$$, $S_0$ =/ \$, where $S[SA[i] + len] = \$$ and $S[SA[j] + len] = \$$. Suppose that SA-FLS contain one item, that would suggest that $i=j$ which is a contradiction.
+\\ \\
+Suppose that $SA$ is sorted in lexicographically order for all suffixes in $S=S_0\$S_1\$...S_{n-1}\$$ where $S_0, S_1,…,S_{n-1}$ does not contain the termination symbol ‘\$’ and $len =|S_0|=|S_1|=…=|S_{n-1}|$.
+\\ \\
+Suppose that all indices from $SA$, where $S[SA[i]+ len] = ‘\$’$, $0 < i < n$, has been successfully added to the array $SA-FLS$. Suppose that there exists some $j$ in $SA-FLS$ where $S[SA-FLS[j] + len] =''\$''$, that would suggest that there exists an index $SA[i] = SA[j]$ where $S[SA[i] + len] =''\$''$, but that is a contradiction, since only indices that are bound by $S[SA-FLS[i] + len] =''\$''$ was added to $SA-FLS$.
+\\ \\
+Lemma 6.1-1 and Lemma 6.1-2 suggest that $SA-FLS$ contains indices in lexicographical sorted order and are bound by $S[SA-FLS[i] + len] =''\$''$. Furthermore, the length of $SA-FLS$ is proportional to the number of the fixed length distinct string in $S=S_0\$S_1\$...S_{n-1}\$$.
+For large fixed length strings such as SHA1, SHA256 or MD5 hashes, $SA-FLS$ concededly reduce the number of indices stored. A string consisting of 27.000.000 MD5 hashes would produce a suffix array consisting of 27.000.000 x 33 = 891.000.000 indices, while SA-FLS contains only 27.000.000 indices, which is a reduction factor of 33. For the Sha256, the reduction factor would be 257, hence the length of the hash plus the termination symbol.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{totalmalware}
+    \captionsetup{width=0.8\textwidth}
+    \caption{According to AV-TEST, an independent IT-security institute https://www.av-test.org/en/statistics/malware/, 390.000 new malicious programs are identified each day, bringing the total malware count obove 580.000.000 for 2017.}
+    \label{fig:totalmalware}
+\end{figure}
+
+\subsection{Compressed Suffix Arrays - Burrows-Wheeler Transform}
+\subsection{Block-Size Compression}
 \subsection{Operations on suffix arrays}
+2-3 sider
 
 \section{Malware Detection System - A string matching approach}
 \subsection{Understanding Malware}
@@ -249,13 +433,12 @@ Let’s suppose for simplification that an application is allowed preprocessing 
 
 \section{Evaluation and recommendations}
 
-Jeg har ikke nået at lave denne, men smider alle opgaverne til dig torsdag eller fredag, som jeg skal beskrevet i mailen.
-Håber det er iorden.
-
 \section{Discussion}
+
 \cite{gusfield}
 
 \section{Future work}
+
 
 \section{Conclussion}
 \section{Literature list and references}
