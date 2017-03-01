@@ -144,7 +144,7 @@ The method align left end of $P$ with left end of $T$ and the scan from left to 
 \newline
 Let $n$ denote the length of $P$ and let $m$ denote the length of $T$, then the worst-case timecomplexity of the naive method, is $\Theta$(nm). This is particular clear if $P$ and $T$ consists of the same repeated characters, such that the is an occurence of $P$ in $T$ for each of the first $m - n - 1$ positions.
 \newline
-Since most discussions of the exact string matching problem begin with the naïve method. This paper adopt this tradition, as it form a basic insight to the more complex exact string matching algorithms presented later on \cite{gusfield}.
+Since most discussions of the exact string matching problem begin with the naive method. This paper adopt this tradition, as it form a basic insight to the more complex exact string matching algorithms presented later on \cite{gusfield}.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.4\textwidth]{comparisonbased1}
@@ -180,7 +180,7 @@ When comparing characters, if a character in $T$ match $P[0]$, store the locatio
 The method in Figure \ref{fig:comparisonbased2} can be improved further, knowing that the next  three  characters are $abx$ after $P$ has shifted to position 5 in $T$. Knowing this, the first three characters are skipped, and character scanning are resumed from position 8 in $T$ and position 3 in $P$, as illustrated in Figure \ref{fig:comparisonbased3} \cite{gusfield}. 
 \newline
 The three methods presented exemplifies the basic idea of comparison based algorithms. More efficient algorithms have been developed, such as the Boyer-Moore and Knuth-Morris-Pratt algorithm, which have been implemented to run in linear time $(O(n+m) time)$ \cite{gusfield}. These are without a doubt interesting algorithms to analyze, however this paper merely delivers a short and precise description of the paradigm.
-Another approach to the comparison based method is the preprocessing approach, where comparisons are skipped by first spending a small amount of time, learning about the internal structure of pattern $P$ or text $T$. Some methods preprocess pattern $P$ to solve the exact string matching problem, where the opposite approach is to preprocess text $T$, such as algorithm based on suffix trees \cite{gusfield}.
+Another approach to the comparison based method is the preprocessing approach, where comparisons are skipped by first spending a small amount of time, learning about the internal structure of pattern $P$ or text $T$. Some methods preprocess pattern $P$ to solve the exact string matching problem, where the opposite approach is to preprocess text $T$, such as algorithms based on suffix trees \cite{gusfield}.
 
 \subsection{Suffix trees}
 
@@ -232,8 +232,8 @@ To dive into the substring problem using linear preprocessing time, $O(m)$, and 
 Bla bla bla...
 \newline
 
-\subsubsection{Insertion \& Deletion}
-\subsubsection{Lowest Common Ancestor}
+\textbf{Insertion \& Deletion}
+\textbf{Lowest Common Ancestor}
 
 An interesting application of suffix trees is the $lca$ (Lowest Common Ancestor) problem, that is, finding the lowest common ancestor of node $i$ and $j$ in tree $T$. 
 Lowest common ancestor was first obtained by Harel and Tarjan (1984, published online 2006 \cite{lcaWeb}) and later on simplified by Schieber and Vishkin (1988, published online in 2006 \cite{lcaWebSch})\cite{gusfield}.
@@ -248,7 +248,7 @@ By consuming linear time amount of preprocessing a suffix tree, that is a rooted
 \textbf{Definition}   In a rooted tree $T$, the lowest common ancestor of two node $u$ and $v$, is the deepest node in tree $T$ that is an ancestor of both $u$ and $v$ \cite{gusfield}.
 \end{quote}
 Let’s suppose for simplification that an application is allowed preprocessing time of an upper bound of $\theta (n lg n)$, which is an acceptable bound for most applications \cite{gusfield}. Then, in the preprocessing state of tree $T$, perform a deept-first traversal of tree $T$ and create a list $L$ of nodes in order as they are visited. Then locating the $lca$ of node $2$ and $8$, $lca[2,8]$, in \cref{fig:travesal}, one only have to find any occurrences of $2$ and $8$ in $L$. Then take the lowest value in interval between $L[1] = 2$ and $L[12]=8$. This value is the lowest common ancestor for node $2$ and $8$ in $T$, $lca[2,8]=1$.
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{travesal}
     \captionsetup{width=0.8\textwidth}
@@ -257,9 +257,9 @@ Let’s suppose for simplification that an application is allowed preprocessing 
 \end{figure}
 
 
-\subsubsection{Longest Common Prefix}
+\textbf{Longest Common Prefix}
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.4\textwidth]{suffixtree(speeling_anna)}
     \captionsetup{width=0.8\textwidth}
@@ -269,15 +269,13 @@ Let’s suppose for simplification that an application is allowed preprocessing 
 
 What are the usages
 
-\subsubsection{Predecessor $\&$ Successor Amongst Strings}
+\textbf{Predecessor $\&$ Successor Amongst Strings}
 
 1 side
 
-\subsubsection{Lowest Common Extension}
+\textbf{Lowest Common Extension}
 
 1 side
-\subsection{Space \& Time Complexity}
-\subsection{Suffix Trees To Suffix Arrays In Linear Time}
 
 \subsection{Suffix Arrays}
 
@@ -298,7 +296,15 @@ According to a survey paper, SACAs have to fulfill three important requirements:
 Although no current SACAs fulfill the requirements in an optimal way, research into faster and more space reducing SACAs continued \cite{newapproach}. Later on, in 2009, Nong et al. introduced two new linear time construction algorithms, one which outperformed most known and existing SACAs, called Suffix Array Induced Sorting SA-IS algorithm, guaranteeing asymptotic linear time and almost optimal space requirements \cite{newapproach}. 
 
 
-\subsection{Suffix Array Induced Sorting Algorithm (SA-IS)}
+\subsection{Suffix Trees To Suffix Arrays In Linear Time}
+
+
+
+
+
+
+
+\subsection{SAIS - Suffix Array Induced Sorting Algorithm}
 
 The SA-IS algorithm  is a divide and conquer and recursion algorithm, using variable-length leftmost S-type substrings and induced sorting \cite{twoeffecient}. In view of the fact that the SA-IS algorithm is unsophisticated to comprehend, implement and guarantees asymptotic linear time construction and close to optimal space,  SA-IS has been chosen as the single algorithm for the implementation of a malware detection system and the experiments which follow. 
 \\ \\
@@ -306,19 +312,38 @@ Basic notations:
 \\ \\
 Let $S$ be a string or text of $n$-characters stored in an array $[0…n-1]$ and let $\Sigma(s)$ be the alphabet of $S$. 
 \\ \\
-Let $S$$\$$ be a string $S$ concatenated with the termination symbol $\$$, where $\$$ is not contained in $S$ and is the lexicographical smallest character in $S$. For $S$ containing concatenation of multiple strings, let $S={S_0\$S_1\$...S_n-1\$}$, where $\$$ is the termination symbol for each concatenated string in $S$, and is the lexicographical smallest character in $S_0,S_1,...,S_n-1$. Furthermore, $S$ may not be contained in $S_0,S_1,...,S_n-1$.
+Let $S$$\$$ be a string $S$ concatenated with the termination symbol $\$$, where $\$$ is not contained in $S$ and is the lexicographical smallest character in $S$. For $S$ containing concatenation of multiple strings, let $S={S_0\$S_1\$...S_{n-1}\$}$, where $\$$ is the termination symbol for each concatenated string in $S$, and is the lexicographical smallest character in $S_0,S_1,...,S_{n-1}$. Furthermore, $S$ may not be contained in $S_0,S_1,...,S_{n-1}$. String $S$ is supposed to be concatenated with the unique termination symbol $\$$, if not explicit   stated otherwise.
 \\ \\
 Let $suf(S,i)$ be some suffix in $S$ starting at $S[i]$ running to the termination symbol $\$$. $suf(S,i)$ is of S-type or L-type if $suf(S,i) < suf(S,i+1)$ or $suf(S,i) > suf(S,i+1)$, respectively.
 \\ \\
 Let $suf(S, n-1)$ be the termination symbol and of S-type.
 \\ \\
+Let $S[i]$ be S-type or L-type, if suf(S,i) is S-type or L-type, respectively.
+\\ \\
+Observation
+\begin{itemize}
+  \item $S[i]$ is  S-type if $S[i] < S[i+1]$ or $S[i] = S[i+1]$ and $suf(S, i+1)$ is S-type
+  \item $S[i]$ is  L-type if $S[i] < S[i+1]$ or $S[i] = S[i+1]$ and $suf(S, i+1)$ is L-type
+\end{itemize}
+
+The properties defined in the observation suggest that scanning from right to left, determing the type of each suffix or character can be done in constant time, $O(1)$, and that the type array $t$, can be filled in linear time, $O(n)$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{SAISmmii1}
+    \captionsetup{width=0.8\textwidth}
+    \caption{Type array $t$ is filled from right to left}
+    \label{fig:SAISmmii1}
+\end{figure}
+
+Figure \ref{fig:SAISmmii1} illustrates the filled type array, $t$, for text $S$=mmiissiissiippii\$, where text $S$ is scanned from right to left, determining the type of each suffix and character. Going from right to left in Figure \ref{fig:SAISmmii1} we have that $suf(S,16)$=\$ is a S-type, $suf(S,15)$=i\$ > $suf(S,16)$=\$ and is L-type, $suf(S,14)$=ii\$ > $suf(S,16)$=i\$ and is S-type and so forth, filling the type array $t$ in linear time.
 
 
-\subsection{SA-IS - Correctness \& Completeness}
+\subsection{SAIS - Correctness \& Completeness}
 5-8 sider
-\subsection{SA-IS - Linear Time Preprocessing}
+\subsection{SAIS - Linear Time Preprocessing}
 2 sider
-\subsection{Reducing suffix array size for fixed length SA-IS construction}
+\subsection{SAIS-FLS - Space requirement reduction for fixed length strings}
 
 Suppose that string $S$ consists of fixed length strings concatenated together, where each string $S_0,S_1,...,S_n-1$ is terminated with the sentinel $\$$ such that $S=S_0\$S_1\$...S_n-1\$ $.
 \\ \\
@@ -328,7 +353,7 @@ Let the length of pattern $P$, $|P|$, be same length as the fixed length distinc
 \\ \\
 Suppose that the string $S=jazz\$fuzz\$quiz\$$  is given and suffix array SA for $S$ has been computed, such that $SA=[14,4,9,1,5,12,0,10,11,6,13,3,8,2,7]$ as illustated in Figure \ref{fig:jazz}.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.3\textwidth]{jazz}
     \captionsetup{width=0.5\textwidth}
@@ -419,26 +444,31 @@ For large fixed length strings such as SHA1, SHA256 or MD5 hashes, $SA-FLS$ conc
     \label{fig:totalmalware}
 \end{figure}
 
-\subsection{Compressed Suffix Arrays - Burrows-Wheeler Transform}
-\subsection{Block-Size Compression}
-\subsection{Operations on suffix arrays}
+\subsection{Burrows-Wheeler Transform}
+\subsection{SAIS-OPT - Optimization of the SA-IS Algorithm using Burrows-Wheeler Transform}
 2-3 sider
 
-\section{Malware Detection System - A string matching approach}
-\subsection{Understanding Malware}
-\subsection{Building database of known malware - SHA1 encryption}
-\subsection{String matching in Malware detection systems}
+\section{Malware - Malicious Software}
+
+- Encryption
+- Do md5 ganrantee uniqueness?
+
+\subsection{Building database of known malware - MD5 encryption}
+
+\section{Malware Detection System - An exact string matching approach}
 \subsection{Building interactive systems - Windows (R) Forms}
-\subsection{Implementing a Malware detection system using preprocessed suffix arrays of known malware}
+
+- Approach
+- Investigation and project planning
+
+\subsection{Database - RAM vs HHD}
+\subsection{Network & security}
 
 \section{Evaluation and recommendations}
 
 \section{Discussion}
 
-\cite{gusfield}
-
 \section{Future work}
-
 
 \section{Conclussion}
 \section{Literature list and references}

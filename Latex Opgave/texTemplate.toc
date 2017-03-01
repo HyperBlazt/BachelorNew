@@ -1,37 +1,30 @@
 \select@language {english}
-\contentsline {section}{\numberline {1}Abstract}{4}{section.1}
-\contentsline {section}{\numberline {2}Description}{4}{section.2}
-\contentsline {section}{\numberline {3}Preface}{4}{section.3}
-\contentsline {section}{\numberline {4}Limitations}{4}{section.4}
-\contentsline {section}{\numberline {5}Introduction}{4}{section.5}
-\contentsline {section}{\numberline {6}String Matching}{4}{section.6}
-\contentsline {subsection}{\numberline {6.1}Suffix trees}{7}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}Operations on suffix trees}{9}{subsection.6.2}
-\contentsline {subsubsection}{\numberline {6.2.1}Insertion \& Deletion}{9}{subsubsection.6.2.1}
-\contentsline {subsubsection}{\numberline {6.2.2}Lowest Common Ancestor}{9}{subsubsection.6.2.2}
-\contentsline {subsubsection}{\numberline {6.2.3}Longest Common Prefix}{9}{subsubsection.6.2.3}
-\contentsline {subsubsection}{\numberline {6.2.4}Predecessor $\&$ Successor Amongst Strings}{10}{subsubsection.6.2.4}
-\contentsline {subsubsection}{\numberline {6.2.5}Lowest Common Extension}{10}{subsubsection.6.2.5}
-\contentsline {subsection}{\numberline {6.3}Space \& Time Complexity}{10}{subsection.6.3}
+\contentsline {section}{\numberline {1}Abstract}{3}{section.1}
+\contentsline {section}{\numberline {2}Description}{3}{section.2}
+\contentsline {section}{\numberline {3}Preface}{3}{section.3}
+\contentsline {section}{\numberline {4}Limitations}{3}{section.4}
+\contentsline {section}{\numberline {5}Introduction}{3}{section.5}
+\contentsline {section}{\numberline {6}String Matching}{3}{section.6}
+\contentsline {subsection}{\numberline {6.1}Suffix trees}{6}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Operations on suffix trees}{8}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}Suffix Arrays}{9}{subsection.6.3}
 \contentsline {subsection}{\numberline {6.4}Suffix Trees To Suffix Arrays In Linear Time}{10}{subsection.6.4}
-\contentsline {subsection}{\numberline {6.5}Suffix Arrays}{10}{subsection.6.5}
-\contentsline {subsection}{\numberline {6.6}Suffix Array Induced Sorting Algorithm (SA-IS)}{11}{subsection.6.6}
-\contentsline {subsection}{\numberline {6.7}SA-IS - Correctness \& Completeness}{12}{subsection.6.7}
-\contentsline {subsection}{\numberline {6.8}SA-IS - Linear Time Preprocessing}{12}{subsection.6.8}
-\contentsline {subsection}{\numberline {6.9}Reducing suffix array size for fixed length SA-IS construction}{12}{subsection.6.9}
-\contentsline {subsection}{\numberline {6.10}Compressed Suffix Arrays - Burrows-Wheeler Transform}{15}{subsection.6.10}
-\contentsline {subsection}{\numberline {6.11}Block-Size Compression}{15}{subsection.6.11}
-\contentsline {subsection}{\numberline {6.12}Operations on suffix arrays}{15}{subsection.6.12}
-\contentsline {section}{\numberline {7}Malware Detection System - A string matching approach}{16}{section.7}
-\contentsline {subsection}{\numberline {7.1}Understanding Malware}{16}{subsection.7.1}
-\contentsline {subsection}{\numberline {7.2}Building database of known malware - SHA1 encryption}{16}{subsection.7.2}
-\contentsline {subsection}{\numberline {7.3}String matching in Malware detection systems}{16}{subsection.7.3}
-\contentsline {subsection}{\numberline {7.4}Building interactive systems - Windows (R) Forms}{16}{subsection.7.4}
-\contentsline {subsection}{\numberline {7.5}Implementing a Malware detection system using preprocessed suffix arrays of known malware}{16}{subsection.7.5}
-\contentsline {section}{\numberline {8}Evaluation and recommendations}{16}{section.8}
-\contentsline {section}{\numberline {9}Discussion}{16}{section.9}
-\contentsline {section}{\numberline {10}Future work}{16}{section.10}
-\contentsline {section}{\numberline {11}Conclussion}{16}{section.11}
-\contentsline {section}{\numberline {12}Literature list and references}{16}{section.12}
-\contentsline {section}{\numberline {13}Appendix}{16}{section.13}
-\contentsline {section}{\numberline {A}One}{17}{appendix.A}
+\contentsline {subsection}{\numberline {6.5}SAIS - Suffix Array Induced Sorting Algorithm}{10}{subsection.6.5}
+\contentsline {subsection}{\numberline {6.6}SAIS - Correctness \& Completeness}{11}{subsection.6.6}
+\contentsline {subsection}{\numberline {6.7}SAIS - Linear Time Preprocessing}{11}{subsection.6.7}
+\contentsline {subsection}{\numberline {6.8}SAIS-FLS - Space requirement reduction for fixed length strings}{11}{subsection.6.8}
+\contentsline {subsection}{\numberline {6.9}Burrows-Wheeler Transform}{14}{subsection.6.9}
+\contentsline {subsection}{\numberline {6.10}SAIS-OPT - Optimization of the SA-IS Algorithm using Burrows-Wheeler Transform}{14}{subsection.6.10}
+\contentsline {section}{\numberline {7}Malware - Malicious Software}{15}{section.7}
+\contentsline {subsection}{\numberline {7.1}Building database of known malware - MD5 encryption}{15}{subsection.7.1}
+\contentsline {section}{\numberline {8}Malware Detection System - An exact string matching approach}{15}{section.8}
+\contentsline {subsection}{\numberline {8.1}Building interactive systems - Windows (R) Forms}{15}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Database - RAM vs HHD}{15}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.3}Network & security}{15}{subsection.8.3}
+\contentsline {section}{\numberline {9}Evaluation and recommendations}{15}{section.9}
+\contentsline {section}{\numberline {10}Discussion}{15}{section.10}
+\contentsline {section}{\numberline {11}Future work}{15}{section.11}
+\contentsline {section}{\numberline {12}Conclussion}{15}{section.12}
+\contentsline {section}{\numberline {13}Literature list and references}{15}{section.13}
+\contentsline {section}{\numberline {14}Appendix}{15}{section.14}
+\contentsline {section}{\numberline {A}One}{16}{appendix.A}

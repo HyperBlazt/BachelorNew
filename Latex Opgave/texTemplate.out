@@ -6,31 +6,24 @@
 \BOOKMARK [1][-]{section.6}{String Matching}{}% 6
 \BOOKMARK [2][-]{subsection.6.1}{Suffix trees}{section.6}% 7
 \BOOKMARK [2][-]{subsection.6.2}{Operations on suffix trees}{section.6}% 8
-\BOOKMARK [3][-]{subsubsection.6.2.1}{Insertion \046 Deletion}{subsection.6.2}% 9
-\BOOKMARK [3][-]{subsubsection.6.2.2}{Lowest Common Ancestor}{subsection.6.2}% 10
-\BOOKMARK [3][-]{subsubsection.6.2.3}{Longest Common Prefix}{subsection.6.2}% 11
-\BOOKMARK [3][-]{subsubsection.6.2.4}{Predecessor \046 Successor Amongst Strings}{subsection.6.2}% 12
-\BOOKMARK [3][-]{subsubsection.6.2.5}{Lowest Common Extension}{subsection.6.2}% 13
-\BOOKMARK [2][-]{subsection.6.3}{Space \046 Time Complexity}{section.6}% 14
-\BOOKMARK [2][-]{subsection.6.4}{Suffix Trees To Suffix Arrays In Linear Time}{section.6}% 15
-\BOOKMARK [2][-]{subsection.6.5}{Suffix Arrays}{section.6}% 16
-\BOOKMARK [2][-]{subsection.6.6}{Suffix Array Induced Sorting Algorithm \(SA-IS\)}{section.6}% 17
-\BOOKMARK [2][-]{subsection.6.7}{SA-IS - Correctness \046 Completeness}{section.6}% 18
-\BOOKMARK [2][-]{subsection.6.8}{SA-IS - Linear Time Preprocessing}{section.6}% 19
-\BOOKMARK [2][-]{subsection.6.9}{Reducing suffix array size for fixed length SA-IS construction}{section.6}% 20
-\BOOKMARK [2][-]{subsection.6.10}{Compressed Suffix Arrays - Burrows-Wheeler Transform}{section.6}% 21
-\BOOKMARK [2][-]{subsection.6.11}{Block-Size Compression}{section.6}% 22
-\BOOKMARK [2][-]{subsection.6.12}{Operations on suffix arrays}{section.6}% 23
-\BOOKMARK [1][-]{section.7}{Malware Detection System - A string matching approach}{}% 24
-\BOOKMARK [2][-]{subsection.7.1}{Understanding Malware}{section.7}% 25
-\BOOKMARK [2][-]{subsection.7.2}{Building database of known malware - SHA1 encryption}{section.7}% 26
-\BOOKMARK [2][-]{subsection.7.3}{String matching in Malware detection systems}{section.7}% 27
-\BOOKMARK [2][-]{subsection.7.4}{Building interactive systems - Windows \(R\) Forms}{section.7}% 28
-\BOOKMARK [2][-]{subsection.7.5}{Implementing a Malware detection system using preprocessed suffix arrays of known malware}{section.7}% 29
-\BOOKMARK [1][-]{section.8}{Evaluation and recommendations}{}% 30
-\BOOKMARK [1][-]{section.9}{Discussion}{}% 31
-\BOOKMARK [1][-]{section.10}{Future work}{}% 32
-\BOOKMARK [1][-]{section.11}{Conclussion}{}% 33
-\BOOKMARK [1][-]{section.12}{Literature list and references}{}% 34
-\BOOKMARK [1][-]{section.13}{Appendix}{}% 35
-\BOOKMARK [1][-]{appendix.A}{One}{}% 36
+\BOOKMARK [2][-]{subsection.6.3}{Suffix Arrays}{section.6}% 9
+\BOOKMARK [2][-]{subsection.6.4}{Suffix Trees To Suffix Arrays In Linear Time}{section.6}% 10
+\BOOKMARK [2][-]{subsection.6.5}{SAIS - Suffix Array Induced Sorting Algorithm}{section.6}% 11
+\BOOKMARK [2][-]{subsection.6.6}{SAIS - Correctness \046 Completeness}{section.6}% 12
+\BOOKMARK [2][-]{subsection.6.7}{SAIS - Linear Time Preprocessing}{section.6}% 13
+\BOOKMARK [2][-]{subsection.6.8}{SAIS-FLS - Space requirement reduction for fixed length strings}{section.6}% 14
+\BOOKMARK [2][-]{subsection.6.9}{Burrows-Wheeler Transform}{section.6}% 15
+\BOOKMARK [2][-]{subsection.6.10}{SAIS-OPT - Optimization of the SA-IS Algorithm using Burrows-Wheeler Transform}{section.6}% 16
+\BOOKMARK [1][-]{section.7}{Malware - Malicious Software}{}% 17
+\BOOKMARK [2][-]{subsection.7.1}{Building database of known malware - MD5 encryption}{section.7}% 18
+\BOOKMARK [1][-]{section.8}{Malware Detection System - An exact string matching approach}{}% 19
+\BOOKMARK [2][-]{subsection.8.1}{Building interactive systems - Windows \(R\) Forms}{section.8}% 20
+\BOOKMARK [2][-]{subsection.8.2}{Database - RAM vs HHD}{section.8}% 21
+\BOOKMARK [2][-]{subsection.8.3}{Network \040security}{section.8}% 22
+\BOOKMARK [1][-]{section.9}{Evaluation and recommendations}{}% 23
+\BOOKMARK [1][-]{section.10}{Discussion}{}% 24
+\BOOKMARK [1][-]{section.11}{Future work}{}% 25
+\BOOKMARK [1][-]{section.12}{Conclussion}{}% 26
+\BOOKMARK [1][-]{section.13}{Literature list and references}{}% 27
+\BOOKMARK [1][-]{section.14}{Appendix}{}% 28
+\BOOKMARK [1][-]{appendix.A}{One}{}% 29
