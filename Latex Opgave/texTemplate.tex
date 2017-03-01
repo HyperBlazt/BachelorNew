@@ -308,7 +308,7 @@ Although no current SACAs fulfill the requirements in an optimal way, research i
 
 The SA-IS algorithm  is a divide and conquer and recursion algorithm, using variable-length leftmost S-type substrings and induced sorting \cite{twoeffecient}. In view of the fact that the SA-IS algorithm is unsophisticated to comprehend, implement and guarantees asymptotic linear time construction and close to optimal space,  SA-IS has been chosen as the single algorithm for the implementation of a malware detection system and the experiments which follow. 
 \\ \\
-Basic notations:
+\textbf{Basic notations}
 \\ \\
 Let $S$ be a string or text of $n$-characters stored in an array $[0…n-1]$ and let $\Sigma(s)$ be the alphabet of $S$. 
 \\ \\
@@ -320,7 +320,7 @@ Let $suf(S, n-1)$ be the termination symbol and of S-type.
 \\ \\
 Let $S[i]$ be S-type or L-type, if suf(S,i) is S-type or L-type, respectively.
 \\ \\
-Observation
+\textbf{Observation}
 \begin{itemize}
   \item $S[i]$ is  S-type if $S[i] < S[i+1]$ or $S[i] = S[i+1]$ and $suf(S, i+1)$ is S-type
   \item $S[i]$ is  L-type if $S[i] < S[i+1]$ or $S[i] = S[i+1]$ and $suf(S, i+1)$ is L-type
@@ -336,7 +336,41 @@ The properties defined in the observation suggest that scanning from right to le
     \label{fig:SAISmmii1}
 \end{figure}
 
-Figure \ref{fig:SAISmmii1} illustrates the filled type array, $t$, for text $S$=mmiissiissiippii\$, where text $S$ is scanned from right to left, determining the type of each suffix and character. Going from right to left in Figure \ref{fig:SAISmmii1} we have that $suf(S,16)$=\$ is a S-type, $suf(S,15)$=i\$ > $suf(S,16)$=\$ and is L-type, $suf(S,14)$=ii\$ > $suf(S,16)$=i\$ and is S-type and so forth, filling the type array $t$ in linear time.
+Figure \ref{fig:SAISmmii1} illustrates the filled type array, $t$, for text $S$=mmiissiissiippii\$, where text $S$ is scanned from right to left, determining the type of each suffix and character. Going from right to left in Figure \ref{fig:SAISmmii1} we have that $suf(S,16)$=\$ is a S-type, $suf(S,15)$=i\$ > $suf(S,16)$=\$ and is L-type, $suf(S,14)$=ii\$ > $suf(S,16)$=i\$ and is L-type and so forth, filling the type array $t$ in linear time.
+\\ \\
+Let $S[i]$ be a left most substring character, if $S[i]$ is S-type and $S[i-1]$ is L-type, and let $suf(S,i)$ be a LMS suffix, if S[i] is a LMS character.
+\\ \\
+Let $S[i..j]$ be a LMS if both S[i] and S[j] are LMS characters, and there exists no other LMS characters in the substring.
+\\ \\
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{SAISmmii2}
+    \captionsetup{width=0.8\textwidth}
+    \caption{Type array $t$ and LMS array defined for S=mmiissiissiippii\$}
+    \label{fig:SAISmmii2}
+\end{figure}
+
+As Figure \ref{fig:SAISmmii2} exemplify, four LMS characters are defined for $S$=mmiissiissiippii\$, here at position 2, 6, 10 and 16 in $S$. Furthermore, four substrings and suffixes exists in $S$, namely $S[2..6]$, $S[6..10]$, S[10..16] and S[16..16], and $S[2..16]$, $S[6..16]$, S[10..16] and S[16..16], respectively.
+After defining the S-types, L-types and LMS, the induction process of LMS substrings commence.
+\\ \\
+
+\textbf{Deffinition}
+\begin{quote}
+Determining the order of any two substrings, the corresponding characters are compared from left to right, comparing their lexicographical values first, and next their types, where S-type is considered highter priority than L-type.
+\end{quote}
+
+\textbf{Induced sorting LMS substrings}
+\\ \\
+This part adress the challenging problem of sorting the variable length LMS substrings. The basic idea is to create a new array, SA, and bucket sort the LMS substring into thier equivalent buckets. Each bucket is named corresponding to the alphabet $\Sigma=\{\$,i,m,p,s\}$ in lexicographical order, such that SA contains four buckets, named $\$$, $i$, $p$ and $s$ in that order, as shown in Figure \ref{fig:SAIS_LMS}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{SAIS_LMS}
+    \captionsetup{width=0.8\textwidth}
+    \caption{$S$ is scanned from left to right, and indices for each LMS substring is appended to the end of its corresponding bucket in $SA$. The first LMS substring index is placed at the end of bucket for $i$, here at position 8 in $SA$ and forwards the bucket end one to the left, hence the bucket end for $i$ now rest at position 7 in $SA$. This process is repeated until all LMS substring indicies are placed in their buckets.}
+    \label{fig:SAIS_LMS}
+\end{figure}
 
 
 \subsection{SAIS - Correctness \& Completeness}

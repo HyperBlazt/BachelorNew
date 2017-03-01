@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.13)  1 MAR 2017 12:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.4.13)  1 MAR 2017 16:39
 entering extended mode
 **"D:/GitHub bachelor/BachelorNew/Latex Opgave/texTemplate.tex"
 ("D:/GitHub bachelor/BachelorNew/Latex Opgave/texTemplate.tex"
@@ -1318,7 +1318,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ! Misplaced alignment tab character &.
 <argument> ...estname }{\numberline {8.3}Network &
                                                    security}\hyper@linkend 
-l.23 ....3}Network & security}{15}{subsection.8.3}
+l.23 ....3}Network & security}{16}{subsection.8.3}
                                                   
 ? 
 )
@@ -1588,31 +1588,39 @@ File: SAISmmii1.png Graphic file (type png)
 Package pdftex.def Info: SAISmmii1.png used on input line 333.
 (pdftex.def)             Requested size: 273.14923pt x 62.62097pt.
 
-Overfull \hbox (13.99513pt too wide) in paragraph at lines 346--346
-[]\T1/cmr/bx/n/14.4 SAIS-FLS - Space re-quire-ment re-duc-tion for fixed length
- strings 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 348--355
+Underfull \hbox (badness 10000) in paragraph at lines 339--345
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 348--355
+Underfull \hbox (badness 10000) in paragraph at lines 339--345
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 348--355
+Underfull \hbox (badness 10000) in paragraph at lines 339--345
 
  []
 
-<jazz.png, id=365, 147.55125pt x 261.97874pt>
-File: jazz.png Graphic file (type png)
- <use jazz.png>
-Package pdftex.def Info: jazz.png used on input line 358.
-(pdftex.def)             Requested size: 136.57462pt x 242.49443pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 339--345
+
+ []
+
+<SAISmmii2.png, id=364, 416.30531pt x 143.03438pt>
+File: SAISmmii2.png Graphic file (type png)
+ <use SAISmmii2.png>
+Package pdftex.def Info: SAISmmii2.png used on input line 348.
+(pdftex.def)             Requested size: 273.14923pt x 93.85297pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 354--357
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 354--357
+
+ []
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1620,20 +1628,63 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[11 <./SAISmmii1.png>]
-Overfull \hbox (1.23279pt too wide) in paragraph at lines 364--366
+[11 <./SAISmmii1.png> <./SAISmmii2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 363--366
+
+ []
+
+<SAIS_LMS.png, id=376, 421.575pt x 405.01312pt>
+File: SAIS_LMS.png Graphic file (type png)
+ <use SAIS_LMS.png>
+Package pdftex.def Info: SAIS_LMS.png used on input line 369.
+(pdftex.def)             Requested size: 227.62206pt x 218.68527pt.
+
+Overfull \hbox (13.99513pt too wide) in paragraph at lines 380--380
+[]\T1/cmr/bx/n/14.4 SAIS-FLS - Space re-quire-ment re-duc-tion for fixed length
+ strings 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 382--389
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 382--389
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 382--389
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[12 <./SAIS_LMS.png>] <jazz.png, id=385, 147.55125pt x 261.97874pt>
+File: jazz.png Graphic file (type png)
+
+<use jazz.png>
+Package pdftex.def Info: jazz.png used on input line 392.
+(pdftex.def)             Requested size: 136.57462pt x 242.49443pt.
+
+Overfull \hbox (1.23279pt too wide) in paragraph at lines 398--400
 []\T1/cmr/m/n/12 By means of the Bi-nary Search al-go-rithm, sup-pose we want t
 o find pat-tern $\OML/cmm/m/it/12 p[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 jazz\O
 T1/cmr/m/n/12 $$\T1/cmr/m/n/12 ,$\OML/cmm/m/it/12 p[] \OT1/cmr/m/n/12 =$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--366
+Underfull \hbox (badness 10000) in paragraph at lines 398--400
 
  []
 
 
-Overfull \hbox (3.25743pt too wide) in paragraph at lines 367--368
+Overfull \hbox (3.25743pt too wide) in paragraph at lines 401--402
 []\T1/cmr/m/n/12 Let $\OML/cmm/m/it/12 N[]S$ \T1/cmr/m/n/12 de-note the num-ber
  of fixed length dis-tinct strings in $\OML/cmm/m/it/12 S \OT1/cmr/m/n/12 = \OM
 L/cmm/m/it/12 S[]\OT1/cmr/m/n/12 $\OML/cmm/m/it/12 S[]\OT1/cmr/m/n/12 $\OML/cmm
@@ -1647,7 +1698,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.369 \\ \\
+l.403 \\ \\
            
 ? 
 
@@ -1657,53 +1708,54 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.370 T
+l.404 T
        his paper introduce an algorithm that reduce suffix array size for fi...
 
 ? 
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.384 D
-       escribe the algorithm
-? 
-
-Underfull \hbox (badness 10000) in paragraph at lines 384--388
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 389--395
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 396--400
-
- []
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[12 <./jazz.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 401--405
+[13 <./jazz.png>]
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.418 D
+       escribe the algorithm
+? 
+
+Underfull \hbox (badness 10000) in paragraph at lines 418--422
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 406--408
+Underfull \hbox (badness 10000) in paragraph at lines 423--429
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 409--411
+Underfull \hbox (badness 10000) in paragraph at lines 430--434
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 435--439
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 440--442
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 443--445
 
  []
 
@@ -1714,7 +1766,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.414 \\ \\
+l.448 \\ \\
            
 ? 
 
@@ -1724,43 +1776,43 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.415 \textbf
+l.449 \textbf
              {Proof By Contradiction}
 ? 
 
-Underfull \hbox (badness 10000) in paragraph at lines 415--424
+Underfull \hbox (badness 10000) in paragraph at lines 449--458
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 415--424
+Underfull \hbox (badness 10000) in paragraph at lines 449--458
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 415--424
+Underfull \hbox (badness 10000) in paragraph at lines 449--458
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 415--424
+Underfull \hbox (badness 10000) in paragraph at lines 449--458
 
  []
 
 
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 425.
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 459.
 
 ! Double superscript.
 <recently read> ^
                  
-l.425 ...\$$ where $S[SA-FLS[i] + len] = ''\$''’
+l.459 ...\$$ where $S[SA-FLS[i] + len] = ''\$''’
                                                   $, $len = $l$=$|S_0|$ = $|...
 
 ? 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.425 ...S[i] + len] = ''\$''’$, $len = $l$=$|S_
+l.459 ...S[i] + len] = ''\$''’$, $len = $l$=$|S_
                                                   0|$ = $|S_1|$=…=$|S_{n-1...
 
 ? 
@@ -1771,7 +1823,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.427 \\ \\
+l.461 \\ \\
            
 ? 
 
@@ -1781,45 +1833,45 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.428 \textbf
+l.462 \textbf
              {Proof By Contradiction}
 ? 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.430 ... < |SA|$ and $len = S_0$ in $S=S_0$$, $S_
+l.464 ... < |SA|$ and $len = S_0$ in $S=S_0$$, $S_
                                                   0$ =/ \$, where $S[SA[i] +...
 
 ? 
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 432.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 466.
 
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 432.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 466.
 
 
-LaTeX Warning: Command \textquoteleft invalid in math mode on input line 434.
+LaTeX Warning: Command \textquoteleft invalid in math mode on input line 468.
 
 
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 434.
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 468.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 428--438
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 428--438
+Underfull \hbox (badness 10000) in paragraph at lines 462--472
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 428--438
+Underfull \hbox (badness 10000) in paragraph at lines 462--472
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 428--438
+Underfull \hbox (badness 10000) in paragraph at lines 462--472
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 462--472
 
  []
 
@@ -1829,11 +1881,11 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[13] <totalmalware.png, id=393, 603.75563pt x 544.28343pt>
+[14] <totalmalware.png, id=406, 603.75563pt x 544.28343pt>
 File: totalmalware.png Graphic file (type png)
 
 <use totalmalware.png>
-Package pdftex.def Info: totalmalware.png used on input line 441.
+Package pdftex.def Info: totalmalware.png used on input line 475.
 (pdftex.def)             Requested size: 273.14923pt x 246.23749pt.
 
 
@@ -1842,16 +1894,16 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[14 <./totalmalware.png>]
+[15 <./totalmalware.png>]
 ! Misplaced alignment tab character &.
 <argument> Network &
                      security
-l.465 \subsection{Network & security}
+l.499 \subsection{Network & security}
                                      
 ? 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `alignment tab' on input line 465.
+(hyperref)                removing `alignment tab' on input line 499.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1859,14 +1911,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[15]
+[16]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[16] (texTemplate.bbl
+[17] (texTemplate.bbl
 Overfull \hbox (31.36732pt too wide) in paragraph at lines 4--6
 []\T1/cmr/m/n/12 ``Strings - ad-vanced data struc-tures.'' https://www.youtube.
 com/watch?v=F3nbY3hIDLQl. 
@@ -1899,7 +1951,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[17]
+[18]
 Overfull \hbox (27.72527pt too wide) in paragraph at lines 90--92
 []\T1/cmr/m/n/12 ``Programming and prob-lem solv-ing (pop).'' http://kurser.ku.
 dk/course/ndab15009u/2015-
@@ -1925,24 +1977,24 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[18]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 497.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 497.
+[19]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 531.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 531.
  (texTemplate.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 497.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 497.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 531.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 531.
 Package rerunfilecheck Info: File `texTemplate.out' has not changed.
 (rerunfilecheck)             Checksum: E69CA407FB1D15E6442BCCC1689181FF;2038.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 497.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 531.
  ) 
 Here is how much of TeX's memory you used:
- 24888 strings out of 493634
- 451908 string characters out of 3146585
- 659518 words of memory out of 3000000
- 27718 multiletter control sequences out of 15000+200000
+ 24905 strings out of 493634
+ 452180 string characters out of 3146585
+ 661518 words of memory out of 3000000
+ 27730 multiletter control sequences out of 15000+200000
  17904 words of font info for 51 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 62i,18n,92p,1055b,1077s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,18n,92p,1055b,1897s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Mark Roland\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\d
 pi600\ectt1200.pk> <C:\Users\Mark Roland\AppData\Local\MiKTeX\2.9\fonts\pk\ljfo
 ur\jknappen\ec\dpi600\ecti1200.pk> <C:\Users\Mark Roland\AppData\Local\MiKTeX\2
@@ -1965,9 +2017,9 @@ onts/cm/cmsy8.pfb><C:/Users/Mark Roland/AppData/Local/Programs/MiKTeX 2.9/fonts
 /type1/urw/courier/ucrr8a.pfb><C:/Users/Mark Roland/AppData/Local/Programs/MiKT
 eX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/Mark Roland/AppData/Local/
 Programs/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb>
-Output written on texTemplate.pdf (18 pages, 448651 bytes).
+Output written on texTemplate.pdf (19 pages, 466315 bytes).
 PDF statistics:
- 872 PDF objects out of 1000 (max. 8388607)
- 104 named destinations out of 1000 (max. 500000)
- 325 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 887 PDF objects out of 1000 (max. 8388607)
+ 107 named destinations out of 1000 (max. 500000)
+ 335 words of extra memory for PDF output out of 10000 (max. 10000000)
 
