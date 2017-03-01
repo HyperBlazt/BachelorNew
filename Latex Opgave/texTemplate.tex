@@ -34,6 +34,9 @@
 \usepackage{graphicx}
 \usepackage{lipsum}
 \usepackage{cleveref}
+\lstset{
+    escapeinside={(*@}{@*)},          % if you want to add LaTeX within your code
+}
 
 \definecolor{bluekeywords}{rgb}{0.13,0.13,1}
 \definecolor{greencomments}{rgb}{0,0.5,0}
@@ -307,7 +310,36 @@ Although no current SACAs fulfill the requirements in an optimal way, research i
 \subsection{SAIS - Suffix Array Induced Sorting Algorithm}
 
 The SA-IS algorithm  is a divide and conquer and recursion algorithm, using variable-length leftmost S-type substrings and induced sorting \cite{twoeffecient}. In view of the fact that the SA-IS algorithm is unsophisticated to comprehend, implement and guarantees asymptotic linear time construction and close to optimal space,  SA-IS has been chosen as the single algorithm for the implementation of a malware detection system and the experiments which follow. 
-\\ \\
+
+\begin{quote}
+\begin{lstlisting}[ basicstyle=\scriptsize, %or \small or \footnotesize etc.
+]
+SAIS(S, SA)
+    (* Step 1 : Initialization & classification*)
+    SA <-- suffix array of S
+    t <-- type array
+    P <-- LMS indicies array
+    B <-- bucket array
+    Scan S once from either left or right and classify all characters as 
+        S-type or L-type and place them inot t.
+    Scan t once from  either left or right and locate all LMS substrings 
+        in S and put them into P_1
+    (* Step 2 : Induced sort LMS-substring)
+    Induced sort all LMS substrings unsing P_1 and B
+    Name each LMS substring in S by its bucket index to get a 
+        new shortened string S_1
+    (* Step 3 : Uniqueness - recursive step)
+    (*@\textbf{if}  @*) T_1 is distinct, hence all characters are unique
+       (*@\textbf{then}  @*) 
+           Directly compute SA_1 from S_1
+       (*@\textbf{else}  @*) 
+           SAIS(S_1, SA_1)
+    (* Step 4 : Induce SA from SA_1)
+    Induce SA from SA_1       
+    (*@\textbf{return}  @*) 
+\end{lstlisting}
+\end{quote}
+
 \textbf{Basic notations}
 \\ \\
 Let $S$ be a string or text of $n$-characters stored in an array $[0…n-1]$ and let $\Sigma(s)$ be the alphabet of $S$. 
@@ -372,6 +404,18 @@ This part adress the challenging problem of sorting the variable length LMS subs
     \label{fig:SAIS_LMS}
 \end{figure}
 
+When the LMS substrings are placed, then scan $SA$ from left to right and for each nonnegative value $S[i]$, if $S[i]-1$ is L-type, then place $SA[i]-1$ in the corresponding bucket for $suf(S, SA[i]-1)$, and lastly forward the bucket head one to the right. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{SAIS_LMSfinal}
+    \captionsetup{width=0.8\textwidth}
+    \caption{$SA$ after the induced sorting for LMS substriung}
+    \label{fig:SAIS_LMSfinal}
+    
+\end{figure}
+\\
+Roughly equivalent, when all L-types are placed, scan $SA$ from right to the left for each nonnegative value S[i], if $S[i]-1$ is S-type, then place $SA[i]-1$ in the corresponding bucket for $suf(S, SA[i]-1)$, and forward the bucket end one to the left.The above operations are demonstrated in Appendix \ref{SAIS Algorithm run} and the final result is displayed in Figure \ref{fig:SAIS_LMSfinal}.
+
 
 \subsection{SAIS - Correctness \& Completeness}
 5-8 sider
@@ -389,8 +433,9 @@ Suppose that the string $S=jazz\$fuzz\$quiz\$$  is given and suffix array SA for
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.3\textwidth]{jazz}
-    \captionsetup{width=0.5\textwidth}
+    \includegraphics[width=0.2\textwidth]{jazz}
+    \captionsetup{width=0.8
+    \textwidth}
     \caption{Suffix array and suffixes for S=jazz$\$$fuzz$\$$quiz$\$$}
     \label{fig:jazz}
 \end{figure}
@@ -516,7 +561,21 @@ For large fixed length strings such as SHA1, SHA256 or MD5 hashes, $SA-FLS$ conc
 \newpage
 \appendix
 \label{appendix}
-\section{One}\label{sec:One}
+\section{SAIS Algorithm run}\label{SAIS Algorithm run}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{SAIS_LMS2}
+    \captionsetup{width=0.8\textwidth}
+    \caption{$S$ is scanned from left to right, and indices for each LMS substring is appended to the end of its corresponding bucket in $SA$. The first LMS substring index is placed at the end of bucket for $i$, here at position 8 in $SA$ and forwards the bucket end one to the left, hence the bucket end for $i$ now rest at position 7 in $SA$. This process is repeated until all LMS substring indicies are placed in their buckets.}
+    \label{fig:SAIS_LMS2}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{SAIS_LMS3}
+    \captionsetup{width=0.8\textwidth}
+    \caption{$S$ is scanned from left to right, and indices for each LMS substring is appended to the end of its corresponding bucket in $SA$. The first LMS substring index is placed at the end of bucket for $i$, here at position 8 in $SA$ and forwards the bucket end one to the left, hence the bucket end for $i$ now rest at position 7 in $SA$. This process is repeated until all LMS substring indicies are placed in their buckets.}
+    \label{fig:SAIS_LMS3}
+\end{figure}
 \lipsum[21]
 %I will let this talk for it self. And no, you don't need it right now, so out comment it or delete it $\ddot\smile$
 
