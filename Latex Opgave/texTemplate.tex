@@ -321,7 +321,7 @@ SAIS(S, SA)
     P <-- LMS indicies array
     B <-- bucket array
     Scan S once from either left or right and classify all characters as 
-        S-type or L-type and place them inot t.
+        S-type or L-type and place them in t.
     Scan t once from  either left or right and locate all LMS substrings 
         in S and put them into P_1
     (* Step 2 : Induced sort LMS-substring)
@@ -370,9 +370,9 @@ The properties defined in the observation suggest that scanning from right to le
 
 Figure \ref{fig:SAISmmii1} illustrates the filled type array, $t$, for text $S$=mmiissiissiippii\$, where text $S$ is scanned from right to left, determining the type of each suffix and character. Going from right to left in Figure \ref{fig:SAISmmii1} we have that $suf(S,16)$=\$ is a S-type, $suf(S,15)$=i\$ > $suf(S,16)$=\$ and is L-type, $suf(S,14)$=ii\$ > $suf(S,16)$=i\$ and is L-type and so forth, filling the type array $t$ in linear time.
 \\ \\
-Let $S[i]$ be a left most substring character, if $S[i]$ is S-type and $S[i-1]$ is L-type, and let $suf(S,i)$ be a LMS suffix, if S[i] is a LMS character.
+Let $S[i]$ be a left most S-typeLMS character, if $S[i]$ is S-type and $S[i-1]$ is L-type, and let $suf(S,i)$ be a LMS suffix, if S[i] is a LMS character.
 \\ \\
-Let $S[i..j]$ be a LMS if both S[i] and S[j] are LMS characters, and there exists no other LMS characters in the substring.
+Let $S[i..j]$ be a LMS substring if both S[i] and S[j] are LMS characters, and there exists no other LMS characters in the substring, and $i \neq j$ or it is the sentinel itself.
 \\ \\
 
 \begin{figure}[H]
@@ -395,12 +395,13 @@ Determining the order of any two substrings, the corresponding characters are co
 \textbf{Induced sorting LMS substrings}
 \\ \\
 This part adress the challenging problem of sorting the variable length LMS substrings. The basic idea is to create a new array, SA, and bucket sort the LMS substring into thier equivalent buckets. Each bucket is named corresponding to the alphabet $\Sigma=\{\$,i,m,p,s\}$ in lexicographical order, such that SA contains four buckets, named $\$$, $i$, $p$ and $s$ in that order, as shown in Figure \ref{fig:SAIS_LMS}.
+$S$ is scanned from left to right, and indices for each LMS substring is appended to the end of its corresponding bucket in $SA$. The first LMS substring index is placed at the end of bucket for $i$, here at position 8 in $SA$ and forwards the bucket end one to the left, hence the bucket end for $i$ now rest at position 7 in $SA$. This process is repeated until all LMS substring indicies are placed in their buckets.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{SAIS_LMS}
     \captionsetup{width=0.8\textwidth}
-    \caption{$S$ is scanned from left to right, and indices for each LMS substring is appended to the end of its corresponding bucket in $SA$. The first LMS substring index is placed at the end of bucket for $i$, here at position 8 in $SA$ and forwards the bucket end one to the left, hence the bucket end for $i$ now rest at position 7 in $SA$. This process is repeated until all LMS substring indicies are placed in their buckets.}
+    \caption{Induced sort of LMS substring}
     \label{fig:SAIS_LMS}
 \end{figure}
 
@@ -409,13 +410,35 @@ When the LMS substrings are placed, then scan $SA$ from left to right and for ea
     \centering
     \includegraphics[width=0.5\textwidth]{SAIS_LMSfinal}
     \captionsetup{width=0.8\textwidth}
-    \caption{$SA$ after the induced sorting for LMS substriung}
+    \caption{$SA$ after the induced sorting for LMS substring.}
     \label{fig:SAIS_LMSfinal}
     
 \end{figure}
 \\
-Roughly equivalent, when all L-types are placed, scan $SA$ from right to the left for each nonnegative value S[i], if $S[i]-1$ is S-type, then place $SA[i]-1$ in the corresponding bucket for $suf(S, SA[i]-1)$, and forward the bucket end one to the left.The above operations are demonstrated in Appendix \ref{SAIS Algorithm run} and the final result is displayed in Figure \ref{fig:SAIS_LMSfinal}.
+Roughly equivalent, when all L-types are placed, scan $SA$ from right to the left for each nonnegative value S[i], if $S[i]-1$ is S-type, then place $SA[i]-1$ in the corresponding bucket for $suf(S, SA[i]-1)$, and forward the bucket end one to the left. The above operations are demonstrated in Appendix \ref{SAIS Algorithm run} and the final result is displayed in Figure \ref{fig:SAIS_LMSfinal}.
+\\ \\
+It is now the matter of determine if all LMS substrings are correctly sorted in SA, hence the uniqueness step in the SAIS algorithm. This is done by scanning $SA$ from left to right, and optaining each LMS substring, and comparing the lexicographical values and types, and place them in buckets named accordingly to the lexicografical order they appear, starting from 0. So scanning from left to right in $SA$ given in Figure \ref{fig:SAIS_LMSfinal} gives the following bucket $B = \{\{0; \$\}, \{1; iippii\$\}, \{2; iissi, iissi\}\}$. The bucket keys are then placed in $S_1$ in the order as they appear in the original string $S$, hence $S_1 = \{2,2,0,1\}$ as illustrated in Figure \ref{fig:SAIS_LMSS}. If each character in $S_1$ is unique, hence does not exists any where else in $S$, then $SA_1$ can be computed directly from $S_1$, else fire the recurssive step $SAIS(S_1, SA_1)$. $S_1$ for $S$ in Figure \ref{fig:SAIS_LMSS} is not distinct, since $2$ exists twice in $S_1$, hence $2$ is not unique, concequently a recursive step, $SA(S_1, SA_1)$,  is needed. Before venturing into the recursive step, save the original positions of the LMS substrings as they appear in $S_1$ into $P_1$, where $S_{1}[0] = 2$ points at position 2 in $S$,  $S_{1}[1] = 2$ points at position 6 in $S$, $S_{1}[2] = 1$ points at position 10 in $S$ and finally $S_{1}[3] = 0$ points at positon 16 in $S$, such that $P_1=[2; 6; 10; 16]$.
+\\
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{SAIS_LMSS}
+    \captionsetup{width=0.8\textwidth}
+    \caption{Building $S_1$ from $SA$, using the original positions of the LMS substrings in $S$.}
+    \label{fig:SAIS_LMSS}
+    
+\end{figure}
+\\
+In the resursive step for $SAIS(S_1, SA_1)$, locate S-types, L-types and LMS characters/substrings and determine if $S_1$ is distinct. In this case, as demonstrated in Figure  \ref{fig:SAIS_RECURSIVE}, there is only one LMS substring in $S$ so the new string $S_1$ is trivially distinct.
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{SAIS_RECURSIVE}
+    \captionsetup{width=0.8\textwidth}
+    \caption{The recursive step $SA(S_1, SA_1)$.  First S-types, L-types and LMS characters/substrings for $S_1$ is localized. Secondly, induced sort LMS substrings, such that $SA_1 = [3;2;1;0]$. Last, scan $SA_1$ from right to left and place $P_1[SA_1[i]]$ into the buckets end of $SA$ as described for induced sorting LMS Substrings, foreach item in $SA_1$. The final result is displayed in step 3.}
+    \label{fig:SAIS_RECURSIVE}
+    
+\end{figure}
+\\
 
 \subsection{SAIS - Correctness \& Completeness}
 5-8 sider
@@ -423,11 +446,11 @@ Roughly equivalent, when all L-types are placed, scan $SA$ from right to the lef
 2 sider
 \subsection{SAIS-FLS - Space requirement reduction for fixed length strings}
 
-Suppose that string $S$ consists of fixed length strings concatenated together, where each string $S_0,S_1,...,S_n-1$ is terminated with the sentinel $\$$ such that $S=S_0\$S_1\$...S_n-1\$ $.
+Suppose that string $S$ consists of fixed length strings concatenated together, where each string $S_0,S_1,...,S_{n-1}$ is terminated with the sentinel $\$$ such that $S=S_0\$S_1\$...S_{n-1}\$ $.
 \\ \\
-Let $S=S_0\$S_1\$...S_n-1\$ $ consist of concatenated fixed length distinct strings, such that $|S_0|$ = $|S_1|$=…=$|S_n-1|$ and each string in $S$ is terminated by the sentinel.
+Let $S=S_0\$S_1\$...S_{n-1}\$ $ consist of concatenated fixed length distinct strings, such that $|S_0|$ = $|S_1|$=…=$|S_{n-1}|$ and each string in $S$ is terminated by the sentinel.
 \\ \\
-Let the length of pattern $P$, $|P|$, be same length as the fixed length distinct string in $S$, such that $|P|$=$|S_0|$ = $|S_1|$=…=$|S_n-1|$ .
+Let the length of pattern $P$, $|P|$, be same length as the fixed length distinct string in $S$, such that $|P|$=$|S_0|$ = $|S_1|$=…=$|S_{n-1}|$ .
 \\ \\
 Suppose that the string $S=jazz\$fuzz\$quiz\$$  is given and suffix array SA for $S$ has been computed, such that $SA=[14,4,9,1,5,12,0,10,11,6,13,3,8,2,7]$ as illustated in Figure \ref{fig:jazz}.
 
@@ -440,10 +463,10 @@ Suppose that the string $S=jazz\$fuzz\$quiz\$$  is given and suffix array SA for
     \label{fig:jazz}
 \end{figure}
 
-By means of the Binary Search algorithm, suppose we want to find pattern $p_0=jazz\$$,$ p_1=fuzz\$$ and $p_2=quiz\$$ in the suffix array for $S$, such that $SA[i]$ pattern$ p_0=jazz\$$,$ p_1=fuzz\$$ must be a suffix of $T[SA[i]]$. Then $p_0=jazz\$$ is a suffix of $T[SA[0]]$, $p_0=fuzz\$$ is a suffix of $T[SA[5]]$ and $p_0=quiz\$$ is a suffix of $T[SA[10]]$. Now suppose, that we are only interested in exact matching, and do not care for unnecessary suffixes, then notice that we can match all fixed strings in $S$, with merely three indices in $SA$ for $S$, which leads to 12 indices in $SA$ for $S$ that are never used when exploiting exact string matching. 
+By means of the Binary Search algorithm, suppose we want to find pattern $p_0=jazz\$$, $ p_1=fuzz\$$ and $p_2=quiz\$$ in the suffix array for $S$, such that $SA[i]$ pattern$ p_0=jazz\$$,$ p_1=fuzz\$$ must be a suffix of $T[SA[i]]$. Then $p_0=jazz\$$ is a suffix of $T[SA[0]]$, $p_0=fuzz\$$ is a suffix of $T[SA[5]]$ and $p_0=quiz\$$ is a suffix of $T[SA[10]]$. Now suppose, that we are only interested in exact matching, and do not care for unnecessary suffixes, then notice that we can match all fixed strings in $S$, with merely three indices in $SA$ for $S$, which leads to 12 indices in $SA$ for $S$ that are never used when exploiting exact string matching. 
 \\
 \begin{quote}
-Let $N_DS$ denote the number of fixed length distinct strings in $S=S_0\$S_1\$...S_n-1\$ $, where $n$ is number of characters in $S$.
+Let $N_DS$ denote the number of fixed length distinct strings in $S=S_0\$S_1\$...S_{n-1}\$ $, where $n$ is number of characters in $S$.
 \end{quote}
 \\ \\
 This paper introduce an algorithm that reduce suffix array size for fixed length exact matching, from $O(n)$ to $O(N_DS)$ space complexity with linear time construction. 
@@ -485,34 +508,34 @@ Some description here
 \textbf{Correctness}
 \\
 
-Suppose that the length of the strings in $S$, $len$, is known, then scan $SA$ once, from left to right, and find any index where $T[SA[i] + len] = ''\$''$ and add the elements to the new array SA-FLS in $O(m)$ time, where $m$ is the length of $SA$. Constructing the new suffix array for $S$ using SA-IS-FLS, all unnecessary indices in SA are removed and the new array maintain the lexicographical order.
+Suppose that the length of the strings in $S$, $len$, is known, then scan $SA$ once, from left to right, and find any index where $T[SA[i] + len] = \$$ and add the elements to the new array SA-FLS in $O(m)$ time, where $m$ is the length of $SA$. Constructing the new suffix array for $S$ using SAIS-FLS, all unnecessary indices in SA are removed and the new array maintain the lexicographical order.
 \\
 \begin{quote}
-\textbf{Lemma 6.9-1} $SA-IS-FLS$ return a new array $SA-FLS$ that is sorted in lexicographical order.
+\textbf{Lemma 6.9-1} $SAIS-FLS$ return a new array $SA-FLS$ that is sorted in lexicographical order.
 \end{quote}
 \\ \\
 \textbf{Proof By Contradiction} 
 \\ \\
 Let $S$ be a string of strings, where each string is concatenated with the termination symbol $\$$. 
 \\ \\
-Let $SA$ be the suffix array $SA$ for string $S$ and let $n$ denote the length of $SA$. Suppose $SA$ is sorted lexicographical for all suffixes in $S$.
+Let $SA$ be the suffix array for string $S$ and let $n$ denote the number of characters in $SA$. Suppose $SA$ is sorted lexicographical for all suffixes in $S$.
 \\ \\
 Suppose that S[SA-FLS[i]] to S[SA-FLS[j]], where i < j < |SA-FLS| is sorted in lexicographical order.
 Suppose that $S[SA-FLS[j+1]]$ is lexicographical smaller than $S[SA-IS-FLS[j]]$, that would suggest that $SA$ for $S$ is not sorted lexicographical for all suffixes in $S$, which is a contradiction. Furthermore, since $SA$ is scanned from left to right and supposed sorted in lexicographical order, each item put in $SA-FLS$ must have been appended in lexicographical order. 
 \\
 \begin{quote}
-\textbf{Lemma 6.9-2} $SA-IS-FLS$ return a new suffix array, $SA-FLS$, containing all indices from $SA$ for $S=S_0\$S_1\$...S_{n-1}\$$ where $S[SA-FLS[i] + len] = ''\$''’$, $len = $l$=$|S_0|$ = $|S_1|$=…=$|S_{n-1}|\$$ and $0 < i < n$.
+\textbf{Lemma 6.9-2} $SAIS-FLS$ return a new suffix array, $SA-FLS$, containing all indices from $SA$ for $S=S_0\$S_1\$...S_{n-1}\$$ where $S[SA-FLS[i] + len] =\$$, $len = $|S_0|$ = $|S_1|$=…=$|S_{n-1}|\$$ and $0 < i < n$.
 \end{quote}
 \\ \\
 \textbf{Proof By Contradiction} 
 \\ \\
-Suppose that there exist some $i$ and $j$, $i < j$, in SA, $0 < i < j < |SA|$ and $len = S_0$ in $S=S_0$$, $S_0$ =/ \$, where $S[SA[i] + len] = \$$ and $S[SA[j] + len] = \$$. Suppose that SA-FLS contain one item, that would suggest that $i=j$ which is a contradiction.
+Suppose that there exist some $i$ and $j$, $i < j$, in SA, $0 < i < j < |SA|$ and $len = S_0$ in $S=S_0$$, $S_0$ =\$, where $S[SA[i] + len] = \$$ and $S[SA[j] + len] = \$$. Suppose that SA-FLS contain one item, that would suggest that $i=j$ which is a contradiction.
 \\ \\
-Suppose that $SA$ is sorted in lexicographically order for all suffixes in $S=S_0\$S_1\$...S_{n-1}\$$ where $S_0, S_1,…,S_{n-1}$ does not contain the termination symbol ‘\$’ and $len =|S_0|=|S_1|=…=|S_{n-1}|$.
+Suppose that $SA$ is sorted in lexicographically order for all suffixes in $S=S_0\$S_1\$...S_{n-1}\$$ where $S_0, S_1,…,S_{n-1}$ does not contain the termination symbol \$ and $len =|S_0|=|S_1|=…=|S_{n-1}|$.
 \\ \\
-Suppose that all indices from $SA$, where $S[SA[i]+ len] = ‘\$’$, $0 < i < n$, has been successfully added to the array $SA-FLS$. Suppose that there exists some $j$ in $SA-FLS$ where $S[SA-FLS[j] + len] =''\$''$, that would suggest that there exists an index $SA[i] = SA[j]$ where $S[SA[i] + len] =''\$''$, but that is a contradiction, since only indices that are bound by $S[SA-FLS[i] + len] =''\$''$ was added to $SA-FLS$.
+Suppose that all indices from $SA$, where $S[SA[i]+ len] = \$$, $0 < i < n$, has been successfully added to the array $SA-FLS$. Suppose that there exists some $j$ in $SA-FLS$ where $S[SA-FLS[j] + len] =\$$, that would suggest that there exists an index $SA[i] = SA[j]$ where $S[SA[i] + len] =\$$, but that is a contradiction, since only indices that are bound by $S[SA-FLS[i] + len] =\$$ was added to $SA-FLS$.
 \\ \\
-Lemma 6.1-1 and Lemma 6.1-2 suggest that $SA-FLS$ contains indices in lexicographical sorted order and are bound by $S[SA-FLS[i] + len] =''\$''$. Furthermore, the length of $SA-FLS$ is proportional to the number of the fixed length distinct string in $S=S_0\$S_1\$...S_{n-1}\$$.
+Lemma 6.1-1 and Lemma 6.1-2 suggest that $SA-FLS$ contains indices in lexicographical sorted order and are bound by $S[SA-FLS[i] + len] =\$$. Furthermore, the length of $SA-FLS$ is proportional to the number of the fixed length distinct string in $S=S_0\$S_1\$...S_{n-1}\$$.
 For large fixed length strings such as SHA1, SHA256 or MD5 hashes, $SA-FLS$ concededly reduce the number of indices stored. A string consisting of 27.000.000 MD5 hashes would produce a suffix array consisting of 27.000.000 x 33 = 891.000.000 indices, while SA-FLS contains only 27.000.000 indices, which is a reduction factor of 33. For the Sha256, the reduction factor would be 257, hence the length of the hash plus the termination symbol.
 
 \begin{figure}[H]
