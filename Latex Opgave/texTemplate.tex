@@ -325,7 +325,7 @@ SAIS(S, SA)
     Scan t once from  either left or right and locate all LMS substrings 
         in S and put them into P_1
     (* Step 2 : Induced sort LMS-substring)
-    Induced sort all LMS substrings unsing P_1 and B
+    Induced sort all LMS substrings using P_1 and B
     Name each LMS substring in S by its bucket index to get a 
         new shortened string S_1
     (* Step 3 : Uniqueness - recursive step)
@@ -344,21 +344,21 @@ SAIS(S, SA)
 \\ \\
 Let $S$ be a string or text of $n$-characters stored in an array $[0…n-1]$ and let $\Sigma(s)$ be the alphabet of $S$. 
 \\ \\
-Let $S$$\$$ be a string $S$ concatenated with the termination symbol $\$$, where $\$$ is not contained in $S$ and is the lexicographical smallest character in $S$. For $S$ containing concatenation of multiple strings, let $S={S_0\$S_1\$...S_{n-1}\$}$, where $\$$ is the termination symbol for each concatenated string in $S$, and is the lexicographical smallest character in $S_0,S_1,...,S_{n-1}$. Furthermore, $S$ may not be contained in $S_0,S_1,...,S_{n-1}$. String $S$ is supposed to be concatenated with the unique termination symbol $\$$, if not explicit   stated otherwise.
+Let $S$$\$$ be a string $S$ concatenated with the termination symbol $\$$, where $\$$ is not contained in $S$ and is the lexicographical smallest character in $S$. For $S$ containing concatenation of multiple strings, let $S={S_0\$S_1\$...S_{n-1}\$}$, where $\$$ is the termination symbol for each concatenated string in $S$, and is the lexicographical smallest character in $S_0,S_1,...,S_{n-1}$. Furthermore, $S$ may not be contained in $S_0,S_1,...,S_{n-1}$. String $S$ is supposed to be concatenated with the unique termination symbol $\$$, if not explicit   stated otherwise \cite{twoeffecient}.
 \\ \\
-Let $suf(S,i)$ be some suffix in $S$ starting at $S[i]$ running to the termination symbol $\$$. $suf(S,i)$ is of S-type or L-type if $suf(S,i) < suf(S,i+1)$ or $suf(S,i) > suf(S,i+1)$, respectively.
+Let $suf(S,i)$ be some suffix in $S$ starting at $S[i]$ running to the termination symbol $\$$. $suf(S,i)$ is of S-type or L-type if $suf(S,i) < suf(S,i+1)$ or $suf(S,i) > suf(S,i+1)$, respectively \cite{twoeffecient}.
 \\ \\
-Let $suf(S, n-1)$ be the termination symbol and of S-type.
+Let $suf(S, n-1)$ be the termination symbol and of S-type \cite{twoeffecient}.
 \\ \\
-Let $S[i]$ be S-type or L-type, if suf(S,i) is S-type or L-type, respectively.
+Let $S[i]$ be S-type or L-type, if suf(S,i) is S-type or L-type, respectively \cite{twoeffecient}.
 \\ \\
 \textbf{Observation}
 \begin{itemize}
-  \item $S[i]$ is  S-type if $S[i] < S[i+1]$ or $S[i] = S[i+1]$ and $suf(S, i+1)$ is S-type
-  \item $S[i]$ is  L-type if $S[i] < S[i+1]$ or $S[i] = S[i+1]$ and $suf(S, i+1)$ is L-type
+  \item $S[i]$ is  S-type if $S[i] < S[i+1]$ or $S[i] = S[i+1]$ and $suf(S, i+1)$ is S-type \cite{twoeffecient}.
+  \item $S[i]$ is  L-type if $S[i] < S[i+1]$ or $S[i] = S[i+1]$ and $suf(S, i+1)$ is L-type \cite{twoeffecient}.
 \end{itemize}
 
-The properties defined in the observation suggest that scanning from right to left, determing the type of each suffix or character can be done in constant time, $O(1)$, and that the type array $t$, can be filled in linear time, $O(n)$.
+The properties defined in the observation suggest that scanning from right to left, determing the type of each suffix or character can be done in constant time, $O(1)$, and that the type array $t$, can be filled in linear time, $O(n)$ \cite{twoeffecient}.
 
 \begin{figure}[H]
     \centering
@@ -370,9 +370,9 @@ The properties defined in the observation suggest that scanning from right to le
 
 Figure \ref{fig:SAISmmii1} illustrates the filled type array, $t$, for text $S$=mmiissiissiippii\$, where text $S$ is scanned from right to left, determining the type of each suffix and character. Going from right to left in Figure \ref{fig:SAISmmii1} we have that $suf(S,16)$=\$ is a S-type, $suf(S,15)$=i\$ > $suf(S,16)$=\$ and is L-type, $suf(S,14)$=ii\$ > $suf(S,16)$=i\$ and is L-type and so forth, filling the type array $t$ in linear time.
 \\ \\
-Let $S[i]$ be a left most S-typeLMS character, if $S[i]$ is S-type and $S[i-1]$ is L-type, and let $suf(S,i)$ be a LMS suffix, if S[i] is a LMS character.
+Let $S[i]$ be a left most S-typeLMS character, if $S[i]$ is S-type and $S[i-1]$ is L-type, and let $suf(S,i)$ be a LMS suffix, if S[i] is a LMS character \cite{twoeffecient}.
 \\ \\
-Let $S[i..j]$ be a LMS substring if both S[i] and S[j] are LMS characters, and there exists no other LMS characters in the substring, and $i \neq j$ or it is the sentinel itself.
+Let $S[i..j]$ be a LMS substring if both S[i] and S[j] are LMS characters, and there exists no other LMS characters in the substring, and $i \neq j$ or it is the sentinel itself \cite{twoeffecient}.
 \\ \\
 
 \begin{figure}[H]
@@ -389,13 +389,13 @@ After defining the S-types, L-types and LMS, the induction process of LMS substr
 
 \textbf{Deffinition}
 \begin{quote}
-Determining the order of any two substrings, the corresponding characters are compared from left to right, comparing their lexicographical values first, and next their types, where S-type is considered highter priority than L-type.
+Determining the order of any two substrings, the corresponding characters are compared from left to right, comparing their lexicographical values first, and next their types, where S-type is considered highter priority than L-type \cite{twoeffecient}.
 \end{quote}
 
 \textbf{Induced sorting LMS substrings}
 \\ \\
-This part adress the challenging problem of sorting the variable length LMS substrings. The basic idea is to create a new array, SA, and bucket sort the LMS substring into thier equivalent buckets. Each bucket is named corresponding to the alphabet $\Sigma=\{\$,i,m,p,s\}$ in lexicographical order, such that SA contains four buckets, named $\$$, $i$, $p$ and $s$ in that order, as shown in Figure \ref{fig:SAIS_LMS}.
-$S$ is scanned from left to right, and indices for each LMS substring is appended to the end of its corresponding bucket in $SA$. The first LMS substring index is placed at the end of bucket for $i$, here at position 8 in $SA$ and forwards the bucket end one to the left, hence the bucket end for $i$ now rest at position 7 in $SA$. This process is repeated until all LMS substring indicies are placed in their buckets.
+This part address the challenging problem of sorting the variable length LMS substrings. The basic idea is to create a new array, SA, and bucket sort the LMS substring into their equivalent buckets. Each bucket is named corresponding to the alphabet $\Sigma=\{\$,i,m,p,s\}$ in lexicographical order, such that SA contains four buckets, named $\$$, $i$, $p$ and $s$ in that order, as shown in Figure \ref{fig:SAIS_LMS} \cite{twoeffecient}.
+$S$ is scanned from left to right, and indices for each LMS substring is appended to the end of its corresponding bucket in $SA$. The first LMS substring index is placed at the end of bucket for $i$, here at position 8 in $SA$ and forwards the bucket end one to the left, hence the bucket end for $i$ now rest at position 7 in $SA$. This process is repeated until all LMS substring indicies are placed in their buckets \cite{twoeffecient}.
 
 \begin{figure}[H]
     \centering
@@ -405,7 +405,7 @@ $S$ is scanned from left to right, and indices for each LMS substring is appende
     \label{fig:SAIS_LMS}
 \end{figure}
 
-When the LMS substrings are placed, then scan $SA$ from left to right and for each nonnegative value $S[i]$, if $S[i]-1$ is L-type, then place $SA[i]-1$ in the corresponding bucket for $suf(S, SA[i]-1)$, and lastly forward the bucket head one to the right. 
+When the LMS substrings are placed, then scan $SA$ from left to right and for each nonnegative value $S[i]$, if $S[i]-1$ is L-type, then place $SA[i]-1$ in the corresponding bucket for $suf(S, SA[i]-1)$, and lastly forward the bucket head one to the right \cite{twoeffecient}. 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{SAIS_LMSfinal}
@@ -415,9 +415,9 @@ When the LMS substrings are placed, then scan $SA$ from left to right and for ea
     
 \end{figure}
 \\
-Roughly equivalent, when all L-types are placed, scan $SA$ from right to the left for each nonnegative value S[i], if $S[i]-1$ is S-type, then place $SA[i]-1$ in the corresponding bucket for $suf(S, SA[i]-1)$, and forward the bucket end one to the left. The above operations are demonstrated in Appendix \ref{SAIS Algorithm run} and the final result is displayed in Figure \ref{fig:SAIS_LMSfinal}.
+Roughly equivalent, when all L-types are placed, scan $SA$ from right to the left for each nonnegative value S[i], if $S[i]-1$ is S-type, then place $SA[i]-1$ in the corresponding bucket for $suf(S, SA[i]-1)$, and forward the bucket end one to the left. The above operations are demonstrated in Appendix \ref{SAIS Algorithm run} and the final result is displayed in Figure \ref{fig:SAIS_LMSfinal} \cite{twoeffecient}.
 \\ \\
-It is now the matter of determine if all LMS substrings are correctly sorted in SA, hence the uniqueness step in the SAIS algorithm. This is done by scanning $SA$ from left to right, and optaining each LMS substring, and comparing the lexicographical values and types, and place them in buckets named accordingly to the lexicografical order they appear, starting from 0. So scanning from left to right in $SA$ given in Figure \ref{fig:SAIS_LMSfinal} gives the following bucket $B = \{\{0; \$\}, \{1; iippii\$\}, \{2; iissi, iissi\}\}$. The bucket keys are then placed in $S_1$ in the order as they appear in the original string $S$, hence $S_1 = \{2,2,0,1\}$ as illustrated in Figure \ref{fig:SAIS_LMSS}. If each character in $S_1$ is unique, hence does not exists any where else in $S$, then $SA_1$ can be computed directly from $S_1$, else fire the recurssive step $SAIS(S_1, SA_1)$. $S_1$ for $S$ in Figure \ref{fig:SAIS_LMSS} is not distinct, since $2$ exists twice in $S_1$, hence $2$ is not unique, concequently a recursive step, $SA(S_1, SA_1)$,  is needed. Before venturing into the recursive step, save the original positions of the LMS substrings as they appear in $S_1$ into $P_1$, where $S_{1}[0] = 2$ points at position 2 in $S$,  $S_{1}[1] = 2$ points at position 6 in $S$, $S_{1}[2] = 1$ points at position 10 in $S$ and finally $S_{1}[3] = 0$ points at positon 16 in $S$, such that $P_1=[2; 6; 10; 16]$.
+It is now the matter of determine if all LMS substrings are correctly sorted in SA, hence the uniqueness step in the SAIS algorithm. This is done by scanning $SA$ from left to right, and obtaining each LMS substring, and comparing the lexicographical values and types, and place them in buckets named accordingly to the lexicographical order they appear, starting from 0. So scanning from left to right in $SA$ given in Figure \ref{fig:SAIS_LMSfinal} gives the following bucket $B = \{\{0; \$\}, \{1; iippii\$\}, \{2; iissi, iissi\}\}$. The bucket keys are then placed in $S_1$ in the order as they appear in the original string $S$, hence $S_1 = \{2,2,0,1\}$ as illustrated in Figure \ref{fig:SAIS_LMSS}. If each character in $S_1$ is unique, hence does not exists any where else in $S$, then $SA_1$ can be computed directly from $S_1$, else fire the recursive step $SAIS(S_1, SA_1)$. $S_1$ for $S$ in Figure \ref{fig:SAIS_LMSS} is not distinct, since $2$ exists twice in $S_1$, hence $2$ is not unique, consequently a recursive step, $SA(S_1, SA_1)$,  is needed. Before venturing into the recursive step, save the original positions of the LMS substrings as they appear in $S_1$ into $P_1$, where $S_{1}[0] = 2$ points at position 2 in $S$,  $S_{1}[1] = 2$ points at position 6 in $S$, $S_{1}[2] = 1$ points at position 10 in $S$ and finally $S_{1}[3] = 0$ points at position 16 in $S$, such that $P_1=[2; 6; 10; 16]$ \cite{twoeffecient}.
 \\
 \begin{figure}[H]
     \centering
@@ -428,19 +428,40 @@ It is now the matter of determine if all LMS substrings are correctly sorted in 
     
 \end{figure}
 \\
-In the resursive step for $SAIS(S_1, SA_1)$, locate S-types, L-types and LMS characters/substrings and determine if $S_1$ is distinct. In this case, as demonstrated in Figure  \ref{fig:SAIS_RECURSIVE}, there is only one LMS substring in $S$ so the new string $S_1$ is trivially distinct.
-
+In the recursive step for $SAIS(S_1, SA_1)$, locate S-types, L-types and LMS characters/substrings and determine if $S_1$ is distinct. In this case, as demonstrated in Figure  \ref{fig:SAIS_RECURSIVE}, there is only one LMS substring in $S$ so the new string $S_1$ is trivially distinct.
+\\ \\
+\textbf{Induce sort $SA$ from $SA_{1}$}
+\\ \\
+Either $SA_{1}$ has been computed directly from $S$ (if $S$ is distinct) or returned from one or more recursive steps. In either case, $SA$ can be induced sorted from $SA_1$ using information bound in $P_1$ \cite{twoeffecient}. 
+\\ \\
+First initialize all indicies in $SA$ with $-1$ and find the bucket ends. Then scan $SA_1$ from right to left and place $P_1[SA_1[i]]$ at the corresponding bucket end, and forward the bucket end one item to the left \cite{twoeffecient}. 
+ \\
+Then sort L-types by scanning $SA$ from left to right for each non-negative item $SA[i]$. If  $SA[i-1]$ is L-type, place $SA[i-1]$ in the corresponding bucket head for $SA$ and forward the bucket head one item to the right \cite{twoeffecient}.
+\\
+Last, sort all S-types by scanning SA from right to left for each non-negative item SA[i]. If  $SA[i-1]$ is S-type, place $SA[i-1]$ in the corresponding bucket end, and forward the bucket end one item to the left \cite{twoeffecient}. 
+\\
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\textwidth]{SAIS_RECURSIVE}
+    \includegraphics[width=1.0\textwidth]{SAIS_RECURSIVE}
     \captionsetup{width=0.8\textwidth}
-    \caption{The recursive step $SA(S_1, SA_1)$.  First S-types, L-types and LMS characters/substrings for $S_1$ is localized. Secondly, induced sort LMS substrings, such that $SA_1 = [3;2;1;0]$. Last, scan $SA_1$ from right to left and place $P_1[SA_1[i]]$ into the buckets end of $SA$ as described for induced sorting LMS Substrings, foreach item in $SA_1$. The final result is displayed in step 3.}
+    \caption{The recursive step $SA(S_1, SA_1)$.  First S-types, L-types and LMS characters/substrings for $S_1$ is localized. Secondly, induced sort LMS substrings, such that $SA_1 = [3;2;1;0]$. Last, scan $SA_1$ from right to left and place $P_1[SA_1[i]]$ into the buckets end of $SA$ as described for induced sorting LMS Substrings, for each item in $SA_1$. The final result is displayed in step 4.}
     \label{fig:SAIS_RECURSIVE}
     
 \end{figure}
 \\
+This procedure is demonstrated in Figure \ref{fig:SAIS_RECURSIVEDESCRIPTION} where $SA$ is induced sorted from $S$ for the text $T$=mmiissiissiippii\$. SAIS returns the suffix array $SA$=[16; 15; 14; 10; 6; 2; 11; 7; 3; 1; 0; 13; 12; 9; 5; 8; 4] for text $T$=mmiissiissiippii\$ which is indeed sorted in lexicographical order as illustrated in Figure \ref{fig:SAIS_Sortedorder} \cite{twoeffecient}.
+\\
+It is now demonstrated how the algorithm works step by step. We now proceed to analyze the SAIS algorithm, here to insure that the algorithm actually returns a suffix array sorted in lexicographical order, for all legal inputs. Furthermore, the core mechanics of LMS-substring sorting is analyzed, giving a precise understanding of induce sorting LMSs, L-types and S-types. We will then prove correctness and completeness.
 
-\subsection{SAIS - Correctness \& Completeness}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{SAIS_Sortedorder}
+    \captionsetup{width=0.8\textwidth}
+    \caption{The suffix array for the text $T$=mmiissiissiippii\$.}
+    \label{fig:SAIS_Sortedorder}  
+\end{figure}
+
+\subsection{SAIS - Analysis, Correctness \& Completeness}
 5-8 sider
 \subsection{SAIS - Linear Time Preprocessing}
 2 sider
@@ -452,7 +473,7 @@ Let $S=S_0\$S_1\$...S_{n-1}\$ $ consist of concatenated fixed length distinct st
 \\ \\
 Let the length of pattern $P$, $|P|$, be same length as the fixed length distinct string in $S$, such that $|P|$=$|S_0|$ = $|S_1|$=…=$|S_{n-1}|$ .
 \\ \\
-Suppose that the string $S=jazz\$fuzz\$quiz\$$  is given and suffix array SA for $S$ has been computed, such that $SA=[14,4,9,1,5,12,0,10,11,6,13,3,8,2,7]$ as illustated in Figure \ref{fig:jazz}.
+Suppose that the string $S=jazz\$fuzz\$quiz\$$  is given and suffix array SA for $S$ has been computed, such that $SA=[14,4,9,1,5,12,0,10,11,6,13,3,8,2,7]$ as illustrated in Figure \ref{fig:jazz}.
 
 \begin{figure}[H]
     \centering
@@ -473,7 +494,7 @@ This paper introduce an algorithm that reduce suffix array size for fixed length
 
 \begin{quote}
 \begin{lstlisting}
-SA-IS-FLS(string S, array SA, int len)
+SAIS-FLS(string S, array SA, int len)
 	let SA_FLS = new array[int]()
 	for i=0 to i < length(SA) - 1 do:
 		if(SA[i] NOT EQUAL TO length(S) - len
@@ -601,7 +622,15 @@ For large fixed length strings such as SHA1, SHA256 or MD5 hashes, $SA-FLS$ conc
 \end{figure}
 \lipsum[21]
 %I will let this talk for it self. And no, you don't need it right now, so out comment it or delete it $\ddot\smile$
-
+\newpage
+\section{SAIS Recurssive step}\label{SAIS Algorithm run}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.1\textwidth]{SAIS_RECURSIVEDESCRIPTION}
+    \captionsetup{width=0.8\textwidth}
+    \caption{Some description here}
+    \label{fig:SAIS_RECURSIVEDESCRIPTION}
+\end{figure}
 
 % THIS I WILL NOT EXPLAIN RIGHT NOW - WE CAN TAKE IT WHEN IT IS MORE RELEVANT!
 \newpage

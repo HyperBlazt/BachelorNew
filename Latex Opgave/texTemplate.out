@@ -9,7 +9,7 @@
 \BOOKMARK [2][-]{subsection.6.3}{Suffix Arrays}{section.6}% 9
 \BOOKMARK [2][-]{subsection.6.4}{Suffix Trees To Suffix Arrays In Linear Time}{section.6}% 10
 \BOOKMARK [2][-]{subsection.6.5}{SAIS - Suffix Array Induced Sorting Algorithm}{section.6}% 11
-\BOOKMARK [2][-]{subsection.6.6}{SAIS - Correctness \046 Completeness}{section.6}% 12
+\BOOKMARK [2][-]{subsection.6.6}{SAIS - Analysis, Correctness \046 Completeness}{section.6}% 12
 \BOOKMARK [2][-]{subsection.6.7}{SAIS - Linear Time Preprocessing}{section.6}% 13
 \BOOKMARK [2][-]{subsection.6.8}{SAIS-FLS - Space requirement reduction for fixed length strings}{section.6}% 14
 \BOOKMARK [2][-]{subsection.6.9}{Burrows-Wheeler Transform}{section.6}% 15
@@ -27,3 +27,4 @@
 \BOOKMARK [1][-]{section.13}{Literature list and references}{}% 27
 \BOOKMARK [1][-]{section.14}{Appendix}{}% 28
 \BOOKMARK [1][-]{appendix.A}{SAIS Algorithm run}{}% 29
+\BOOKMARK [1][-]{appendix.B}{SAIS Recurssive step}{}% 30

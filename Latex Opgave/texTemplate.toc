@@ -10,21 +10,22 @@
 \contentsline {subsection}{\numberline {6.3}Suffix Arrays}{9}{subsection.6.3}
 \contentsline {subsection}{\numberline {6.4}Suffix Trees To Suffix Arrays In Linear Time}{10}{subsection.6.4}
 \contentsline {subsection}{\numberline {6.5}SAIS - Suffix Array Induced Sorting Algorithm}{10}{subsection.6.5}
-\contentsline {subsection}{\numberline {6.6}SAIS - Correctness \& Completeness}{15}{subsection.6.6}
-\contentsline {subsection}{\numberline {6.7}SAIS - Linear Time Preprocessing}{15}{subsection.6.7}
-\contentsline {subsection}{\numberline {6.8}SAIS-FLS - Space requirement reduction for fixed length strings}{15}{subsection.6.8}
-\contentsline {subsection}{\numberline {6.9}Burrows-Wheeler Transform}{18}{subsection.6.9}
-\contentsline {subsection}{\numberline {6.10}SAIS-OPT - Optimization of the SA-IS Algorithm using Burrows-Wheeler Transform}{18}{subsection.6.10}
-\contentsline {section}{\numberline {7}Malware - Malicious Software}{18}{section.7}
-\contentsline {subsection}{\numberline {7.1}Building database of known malware - MD5 encryption}{18}{subsection.7.1}
-\contentsline {section}{\numberline {8}Malware Detection System - An exact string matching approach}{18}{section.8}
-\contentsline {subsection}{\numberline {8.1}Building interactive systems - Windows (R) Forms}{18}{subsection.8.1}
-\contentsline {subsection}{\numberline {8.2}Database - RAM vs HHD}{19}{subsection.8.2}
-\contentsline {subsection}{\numberline {8.3}Network & security}{19}{subsection.8.3}
-\contentsline {section}{\numberline {9}Evaluation and recommendations}{19}{section.9}
-\contentsline {section}{\numberline {10}Discussion}{19}{section.10}
-\contentsline {section}{\numberline {11}Future work}{19}{section.11}
-\contentsline {section}{\numberline {12}Conclussion}{19}{section.12}
-\contentsline {section}{\numberline {13}Literature list and references}{19}{section.13}
-\contentsline {section}{\numberline {14}Appendix}{19}{section.14}
-\contentsline {section}{\numberline {A}SAIS Algorithm run}{20}{appendix.A}
+\contentsline {subsection}{\numberline {6.6}SAIS - Analysis, Correctness \& Completeness}{15}{subsection.6.6}
+\contentsline {subsection}{\numberline {6.7}SAIS - Linear Time Preprocessing}{16}{subsection.6.7}
+\contentsline {subsection}{\numberline {6.8}SAIS-FLS - Space requirement reduction for fixed length strings}{16}{subsection.6.8}
+\contentsline {subsection}{\numberline {6.9}Burrows-Wheeler Transform}{19}{subsection.6.9}
+\contentsline {subsection}{\numberline {6.10}SAIS-OPT - Optimization of the SA-IS Algorithm using Burrows-Wheeler Transform}{19}{subsection.6.10}
+\contentsline {section}{\numberline {7}Malware - Malicious Software}{19}{section.7}
+\contentsline {subsection}{\numberline {7.1}Building database of known malware - MD5 encryption}{19}{subsection.7.1}
+\contentsline {section}{\numberline {8}Malware Detection System - An exact string matching approach}{19}{section.8}
+\contentsline {subsection}{\numberline {8.1}Building interactive systems - Windows (R) Forms}{19}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Database - RAM vs HHD}{20}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.3}Network & security}{20}{subsection.8.3}
+\contentsline {section}{\numberline {9}Evaluation and recommendations}{20}{section.9}
+\contentsline {section}{\numberline {10}Discussion}{20}{section.10}
+\contentsline {section}{\numberline {11}Future work}{20}{section.11}
+\contentsline {section}{\numberline {12}Conclussion}{20}{section.12}
+\contentsline {section}{\numberline {13}Literature list and references}{20}{section.13}
+\contentsline {section}{\numberline {14}Appendix}{20}{section.14}
+\contentsline {section}{\numberline {A}SAIS Algorithm run}{21}{appendix.A}
+\contentsline {section}{\numberline {B}SAIS Recurssive step}{23}{appendix.B}
